@@ -1,0 +1,22 @@
+server:
+  port: 6005
+
+spring:
+  application:
+    name: inventoryservice
+  r2dbc:
+    url: r2dbc:pool:mysql://localhost:3306/inventoryservice
+    username: root
+    password:
+  liquibase:
+    url: jdbc:mysql://localhost:3306/inventoryservice
+    enabled: true
+    user: root
+    password:
+    change-log: classpath:db/changelog/changelog-master.xml
+
+logging:
+  level:
+    io.r2dbc.spi: DEBUG
+    dev.miku.r2dbc.mysql: DEBUG
+    org.springframework.data.r2dbc: DEBUG

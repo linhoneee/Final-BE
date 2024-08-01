@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="1" author="yourname">
+        <createTable tableName="products">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="product_name" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description_details" type="text"/>
+            <column name="price" type="double">
+                <constraints nullable="false"/>
+            </column>
+            <column name="category_id" type="bigint"/>
+            <column name="weight" type="double"/>
+            <column name="brand_id" type="bigint"/>
+            <column name="warehouse_ids" type="varchar(255)"/>
+        </createTable>
+
+        <addForeignKeyConstraint baseTableName="products"
+                                 baseColumnNames="category_id"
+                                 constraintName="fk_products_categories"
+                                 referencedTableName="categories"
+                                 referencedColumnNames="id"/>
+
+        <addForeignKeyConstraint baseTableName="products"
+                                 baseColumnNames="brand_id"
+                                 constraintName="fk_products_brands"
+                                 referencedTableName="brands"
+                                 referencedColumnNames="id"/>
+    </changeSet>
+</databaseChangeLog>

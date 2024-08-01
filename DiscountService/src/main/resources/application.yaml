@@ -1,0 +1,17 @@
+server:
+  port: 7007
+
+spring:
+  application:
+    name: discountservice
+  r2dbc:
+    url: r2dbc:pool:mysql://localhost:3306/discountservice
+    username: root
+    password:
+  liquibase:
+    url: jdbc:mysql://localhost:3306/discountservice
+    enabled: true
+    user: root
+    password:
+    change-log: classpath:db/changelog/changelog-master.xml
+

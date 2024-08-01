@@ -1,0 +1,21 @@
+server:
+  port: 8008
+
+spring:
+  application:
+    name: mapservice
+  r2dbc:
+    url: r2dbc:pool:mysql://localhost:3306/mapservice
+    username: root
+    password:
+  liquibase:
+    url: jdbc:mysql://localhost:3306/mapservice
+    enabled: true
+    user: root
+    password:
+    change-log: classpath:db/changelog/changelog-master.xml
+
+mapbox:
+  api:
+    key: pk.eyJ1IjoibGluaGVoZWhlaGVoIiwiYSI6ImNseGh5bXU0MjFrMzEybnByNnJ6ZzJhMXQifQ.Qn1-nmzhjfUMfajkJwT34Q
+

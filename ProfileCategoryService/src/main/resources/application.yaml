@@ -1,0 +1,22 @@
+server:
+  port: 6001
+
+spring:
+  application:
+    name: profilecategoryservice
+  r2dbc:
+    url: r2dbc:pool:mysql://localhost:3306/productcategoryservice
+    username: root
+    password:
+  liquibase:
+    url: jdbc:mysql://localhost:3306/productcategoryservice
+    enabled: true
+    user: root
+    password:
+    change-log: classpath:db/changelog/changelog-master.xml
+  web:
+    resources:
+      static-locations: classpath:/static/,file:uploads/
+
+upload:
+  dir: uploads

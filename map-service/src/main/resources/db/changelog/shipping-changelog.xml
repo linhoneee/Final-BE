@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <!-- ChangeSet for creating Warehouse table -->
+    <changeSet id="1" author="yourname">
+        <createTable tableName="warehouse">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="latitude" type="DOUBLE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="longitude" type="DOUBLE">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <!-- ChangeSet for creating DistanceRecord table -->
+    <changeSet id="2" author="yourname">
+        <createTable tableName="distance_record">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="origin_name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="origin_latitude" type="DOUBLE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="origin_longitude" type="DOUBLE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="destination_name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="destination_latitude" type="DOUBLE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="destination_longitude" type="DOUBLE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="distance" type="DOUBLE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="route" type="TEXT"/>
+        </createTable>
+    </changeSet>
+
+    <!-- ChangeSet for creating ShippingType table -->
+    <changeSet id="3" author="yourname">
+        <createTable tableName="shipping_type">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="price_per_km" type="DOUBLE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="price_per_kg" type="DOUBLE">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>

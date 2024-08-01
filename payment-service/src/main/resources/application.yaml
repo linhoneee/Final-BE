@@ -1,0 +1,36 @@
+server:
+  port: 8009
+
+paypal:
+  client-id: ASQEpoIyqwuwZOFGsGddhCsJx55V1g_T-uYnntu7iMFjTA0gMA1Z6eQSkcH84of9Os9MBkibSW2rFlTz
+  client-secret: EFS8XuE5NDRs19Av4DYSZQ3meuTFQzCoJwNWi-GmFibhB1kCKyeHRWBhkYfF_WUxAXb-mz8MGH8b3oDu
+  mode: sandbox # Use 'sandbox' for testing and 'live' for Production
+
+stripe:
+  api:
+    publicKey: pk_test_51POEJC08hx6m8TqOLOwxxoXy3sIC0tbn5aCOhshra7asAjGRxTLmKPAcDvQckVPKq68WrYdn6OWLNnKjf74wf65600upt0IaNq
+    secretKey: sk_test_51POEJC08hx6m8TqOe5Tx4OKS0A8Zq8Aa0N9cAj22th5etCAznkYj7mvOJjWBpEuSF9cI0TBO79xCj95lWObzXTQc00Bw7REIKo
+
+kafka:
+  bootstrap:
+    servers: localhost:9092
+
+spring:
+  kafka:
+    producer:
+      retries: 3
+      batch-size: 16384
+      buffer-memory: 33554432
+
+payment:
+  kafka:
+    consumer-group-id: paymentService-groupId
+
+logging:
+  level:
+    root: INFO
+    com.linhmai.payment_service: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+  file:
+    name: logs/payment-service.log
