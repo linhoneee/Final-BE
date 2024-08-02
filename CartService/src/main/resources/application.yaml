@@ -14,9 +14,22 @@ spring:
     user: root
     password:
     change-log: classpath:db/changelog/changelog-master.xml
+  kafka:
+    producer:
+      retries: 3
+      batch-size: 16384
+      buffer-memory: 33554432
+    consumer:
+      session.timeout.ms: 30000
+      heartbeat.interval.ms: 10000
+      max.poll.interval.ms: 300000
 
-logging:
-  level:
-    io.r2dbc.spi: DEBUG
-    dev.miku.r2dbc.mysql: DEBUG
-    org.springframework.data.r2dbc: DEBUG
+kafka:
+  bootstrap:
+    servers: localhost:9092
+  consumer:
+    group.initial.rebalance.delay.ms: 3000
+
+payment:
+  kafka:
+    consumer-group-id: cartService-groupId

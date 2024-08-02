@@ -1,4 +1,4 @@
-package com.linhmai.payment_service.Model;
+package com.example.OrderService.Model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

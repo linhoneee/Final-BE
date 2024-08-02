@@ -1,25 +1,1509 @@
-2024-08-01T10:38:03.439+07:00  INFO 11988 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Starting PaymentServiceApplication using Java 17.0.7 with PID 11988 (C:\CODE\FINAL MAIN\test2\payment-service\target\classes started by ASUS in C:\CODE\FINAL MAIN\test2\OrderService)
-2024-08-01T10:38:03.447+07:00 DEBUG 11988 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Running with Spring Boot v3.2.7-SNAPSHOT, Spring v6.1.10
-2024-08-01T10:38:03.449+07:00  INFO 11988 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : No active profile set, falling back to 1 default profile: "default"
-2024-08-01T10:38:05.080+07:00  INFO 11988 --- [CommonService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8009 (http)
-2024-08-01T10:38:05.095+07:00  INFO 11988 --- [CommonService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-08-01T10:38:05.096+07:00  INFO 11988 --- [CommonService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-08-01T10:38:05.176+07:00  INFO 11988 --- [CommonService] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-08-01T10:38:05.177+07:00  INFO 11988 --- [CommonService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1659 ms
-2024-08-01T10:38:05.880+07:00  WARN 11988 --- [CommonService] [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
-2024-08-01T10:38:06.286+07:00  INFO 11988 --- [CommonService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8009 (http) with context path ''
-2024-08-01T10:38:06.297+07:00  INFO 11988 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Started PaymentServiceApplication in 3.705 seconds (process running for 5.948)
-2024-08-01T10:45:10.157+07:00  INFO 11988 --- [CommonService] [http-nio-8009-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-08-01T10:45:10.157+07:00  INFO 11988 --- [CommonService] [http-nio-8009-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-08-01T10:45:10.159+07:00  INFO 11988 --- [CommonService] [http-nio-8009-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2024-08-01T12:03:12.100+07:00  INFO 12684 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Starting PaymentServiceApplication using Java 17.0.7 with PID 12684 (C:\CODE\FINAL MAIN\test2\payment-service\target\classes started by ASUS in C:\CODE\FINAL MAIN\test2\OrderService)
-2024-08-01T12:03:12.102+07:00 DEBUG 12684 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Running with Spring Boot v3.2.7-SNAPSHOT, Spring v6.1.10
-2024-08-01T12:03:12.103+07:00  INFO 12684 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : No active profile set, falling back to 1 default profile: "default"
-2024-08-01T12:03:13.789+07:00  INFO 12684 --- [CommonService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8009 (http)
-2024-08-01T12:03:13.804+07:00  INFO 12684 --- [CommonService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-08-01T12:03:13.805+07:00  INFO 12684 --- [CommonService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-08-01T12:03:13.870+07:00  INFO 12684 --- [CommonService] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-08-01T12:03:13.870+07:00  INFO 12684 --- [CommonService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1705 ms
-2024-08-01T12:03:14.386+07:00  WARN 12684 --- [CommonService] [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
-2024-08-01T12:03:14.623+07:00  INFO 12684 --- [CommonService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8009 (http) with context path ''
-2024-08-01T12:03:14.634+07:00  INFO 12684 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Started PaymentServiceApplication in 3.236 seconds (process running for 4.182)
+2024-08-02T14:25:29.396+07:00  INFO 12208 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Starting PaymentServiceApplication using Java 17.0.7 with PID 12208 (C:\CODE\FINAL MAIN\test2\payment-service\target\classes started by ASUS in C:\CODE\FINAL MAIN\test2\OrderService)
+2024-08-02T14:25:29.402+07:00 DEBUG 12208 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Running with Spring Boot v3.2.7-SNAPSHOT, Spring v6.1.10
+2024-08-02T14:25:29.404+07:00  INFO 12208 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : No active profile set, falling back to 1 default profile: "default"
+2024-08-02T14:25:31.002+07:00  INFO 12208 --- [CommonService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8009 (http)
+2024-08-02T14:25:31.017+07:00  INFO 12208 --- [CommonService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-02T14:25:31.017+07:00  INFO 12208 --- [CommonService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-08-02T14:25:31.090+07:00  INFO 12208 --- [CommonService] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-02T14:25:31.091+07:00  INFO 12208 --- [CommonService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1627 ms
+2024-08-02T14:25:31.731+07:00  WARN 12208 --- [CommonService] [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-08-02T14:25:32.047+07:00  INFO 12208 --- [CommonService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8009 (http) with context path ''
+2024-08-02T14:25:32.060+07:00  INFO 12208 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Started PaymentServiceApplication in 3.497 seconds (process running for 5.491)
+2024-08-02T14:30:48.902+07:00  INFO 14316 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Starting PaymentServiceApplication using Java 17.0.7 with PID 14316 (C:\CODE\FINAL MAIN\test2\payment-service\target\classes started by ASUS in C:\CODE\FINAL MAIN\test2\OrderService)
+2024-08-02T14:30:48.905+07:00 DEBUG 14316 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Running with Spring Boot v3.2.7-SNAPSHOT, Spring v6.1.10
+2024-08-02T14:30:48.907+07:00  INFO 14316 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : No active profile set, falling back to 1 default profile: "default"
+2024-08-02T14:30:50.651+07:00  INFO 14316 --- [CommonService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8009 (http)
+2024-08-02T14:30:50.665+07:00  INFO 14316 --- [CommonService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-02T14:30:50.666+07:00  INFO 14316 --- [CommonService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-08-02T14:30:50.740+07:00  INFO 14316 --- [CommonService] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-02T14:30:50.741+07:00  INFO 14316 --- [CommonService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1767 ms
+2024-08-02T14:30:51.320+07:00  WARN 14316 --- [CommonService] [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-08-02T14:30:51.522+07:00  INFO 14316 --- [CommonService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8009 (http) with context path ''
+2024-08-02T14:30:51.531+07:00  INFO 14316 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Started PaymentServiceApplication in 3.521 seconds (process running for 4.433)
+2024-08-02T14:33:13.925+07:00  INFO 14316 --- [CommonService] [http-nio-8009-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-02T14:33:13.926+07:00  INFO 14316 --- [CommonService] [http-nio-8009-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-02T14:33:13.926+07:00  INFO 14316 --- [CommonService] [http-nio-8009-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-08-02T14:33:44.498+07:00  INFO 14316 --- [CommonService] [http-nio-8009-exec-3] c.l.p.Controller.PaypalController        : Thanh toán thành công: {
+  "id": "PAYID-M2WIXPA2B370650NH554663V",
+  "intent": "sale",
+  "payer": {
+    "payment_method": "paypal",
+    "status": "VERIFIED",
+    "payer_info": {
+      "email": "15102002@personal.example.com",
+      "first_name": "John",
+      "last_name": "Doe",
+      "payer_id": "682LVCHCAMN9Q",
+      "country_code": "US",
+      "shipping_address": {
+        "recipient_name": "John Doe",
+        "line1": "1 Main St",
+        "city": "San Jose",
+        "country_code": "US",
+        "postal_code": "95131",
+        "state": "CA"
+      }
+    }
+  },
+  "cart": "36673978LX0886804",
+  "transactions": [
+    {
+      "related_resources": [
+        {
+          "sale": {
+            "id": "46Y36835FB7405609",
+            "amount": {
+              "currency": "USD",
+              "total": "718.95",
+              "details": {
+                "subtotal": "718.95",
+                "shipping": "0.00",
+                "handling_fee": "0.00",
+                "shipping_discount": "0.00",
+                "insurance": "0.00"
+              }
+            },
+            "payment_mode": "INSTANT_TRANSFER",
+            "state": "completed",
+            "protection_eligibility": "ELIGIBLE",
+            "protection_eligibility_type": "ITEM_NOT_RECEIVED_ELIGIBLE,UNAUTHORIZED_PAYMENT_ELIGIBLE",
+            "transaction_fee": {
+              "currency": "USD",
+              "value": "25.58"
+            },
+            "parent_payment": "PAYID-M2WIXPA2B370650NH554663V",
+            "create_time": "2024-08-02T07:33:43Z",
+            "update_time": "2024-08-02T07:33:43Z",
+            "links": [
+              {
+                "href": "https://api.sandbox.paypal.com/v1/payments/sale/46Y36835FB7405609",
+                "rel": "self",
+                "method": "GET"
+              },
+              {
+                "href": "https://api.sandbox.paypal.com/v1/payments/sale/46Y36835FB7405609/refund",
+                "rel": "refund",
+                "method": "POST"
+              },
+              {
+                "href": "https://api.sandbox.paypal.com/v1/payments/payment/PAYID-M2WIXPA2B370650NH554663V",
+                "rel": "parent_payment",
+                "method": "GET"
+              }
+            ]
+          }
+        }
+      ],
+      "amount": {
+        "currency": "USD",
+        "total": "718.95",
+        "details": {
+          "subtotal": "718.95",
+          "shipping": "0.00",
+          "handling_fee": "0.00",
+          "shipping_discount": "0.00",
+          "insurance": "0.00"
+        }
+      },
+      "payee": {
+        "email": "sb-vkj8131074225@business.example.com",
+        "merchant_id": "YUGBVHGSQHYDJ"
+      },
+      "description": "Payment description",
+      "item_list": {
+        "shipping_address": {
+          "recipient_name": "John Doe",
+          "line1": "1 Main St",
+          "city": "San Jose",
+          "country_code": "US",
+          "postal_code": "95131",
+          "state": "CA"
+        }
+      }
+    }
+  ],
+  "failed_transactions": [],
+  "state": "approved",
+  "create_time": "2024-08-02T07:33:16Z",
+  "update_time": "2024-08-02T07:33:43Z",
+  "links": [
+    {
+      "href": "https://api.sandbox.paypal.com/v1/payments/payment/PAYID-M2WIXPA2B370650NH554663V",
+      "rel": "self",
+      "method": "GET"
+    }
+  ]
+}
+2024-08-02T14:33:44.500+07:00  INFO 14316 --- [CommonService] [http-nio-8009-exec-3] c.l.p.Controller.PaypalController        : Dữ liệu thanh toán: {"id":579578,"userId":2,"items":[{"productId":2,"name":"Sample Productf","price":100.0,"quantity":2,"weight":2,"warehouseIds":"1,2","primaryImageUrl":"/uploads/68c99844-0a28-4bf5-8a99-26ee36e76c6b-o.jpg"}],"selectedShipping":{"id":1,"name":"Ship Thường","pricePerKm":3.0,"pricePerKg":3.0},"distanceData":{"originLatitude":11.623699763447684,"originLongitude":106.63380893803875,"warehouseId":2,"destinationLatitude":10.516610939030933,"destinationLongitude":107.34446195170287,"distance":175.65},"total":718.95}
+2024-08-02T14:33:44.556+07:00  INFO 14316 --- [CommonService] [http-nio-8009-exec-3] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2024-08-02T14:33:44.597+07:00  INFO 14316 --- [CommonService] [http-nio-8009-exec-3] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2024-08-02T14:33:44.676+07:00  INFO 14316 --- [CommonService] [http-nio-8009-exec-3] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.2
+2024-08-02T14:33:44.676+07:00  INFO 14316 --- [CommonService] [http-nio-8009-exec-3] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c4deed513057c94e
+2024-08-02T14:33:44.676+07:00  INFO 14316 --- [CommonService] [http-nio-8009-exec-3] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1722584024673
+2024-08-02T14:33:44.821+07:00 ERROR 14316 --- [CommonService] [http-nio-8009-exec-5] c.l.C.advide.ExceptionAdvide             : Unknown internal server error: No static resource favicon.ico.
+2024-08-02T14:33:44.822+07:00 ERROR 14316 --- [CommonService] [http-nio-8009-exec-5] c.l.C.advide.ExceptionAdvide             : Exception class: class org.springframework.web.servlet.resource.NoResourceFoundException
+2024-08-02T14:33:44.822+07:00 ERROR 14316 --- [CommonService] [http-nio-8009-exec-5] c.l.C.advide.ExceptionAdvide             : Exception cause: null
+2024-08-02T14:33:45.167+07:00  INFO 14316 --- [CommonService] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: viDAuDrvQM-vsXuoC_W1_Q
+2024-08-02T14:33:45.173+07:00  INFO 14316 --- [CommonService] [kafka-producer-network-thread | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 38000 with epoch 0
+2024-08-02T14:33:45.221+07:00  INFO 14316 --- [CommonService] [kafka-producer-network-thread | producer-1] c.l.payment_service.Event.EventProducer  : Message sent to topic PaymentSuccess: {"id":579578,"userId":2,"items":[{"productId":2,"name":"Sample Productf","price":100.0,"quantity":2,"weight":2,"warehouseIds":"1,2","primaryImageUrl":"/uploads/68c99844-0a28-4bf5-8a99-26ee36e76c6b-o.jpg"}],"selectedShipping":{"id":1,"name":"Ship Thường","pricePerKm":3.0,"pricePerKg":3.0},"distanceData":{"originLatitude":11.623699763447684,"originLongitude":106.63380893803875,"warehouseId":2,"destinationLatitude":10.516610939030933,"destinationLongitude":107.34446195170287,"distance":175.65},"total":718.95}
+2024-08-02T14:33:45.222+07:00  INFO 14316 --- [CommonService] [kafka-producer-network-thread | producer-1] c.l.p.Controller.PaypalController        : Sent payment data to Kafka: OK
+2024-08-02T14:40:21.011+07:00  INFO 14316 --- [CommonService] [http-nio-8009-exec-8] c.l.p.Controller.PaypalController        : Thanh toán thành công: {
+  "id": "PAYID-M2WI2WA6LK16781EU929825B",
+  "intent": "sale",
+  "payer": {
+    "payment_method": "paypal",
+    "status": "VERIFIED",
+    "payer_info": {
+      "email": "15102002@personal.example.com",
+      "first_name": "John",
+      "last_name": "Doe",
+      "payer_id": "682LVCHCAMN9Q",
+      "country_code": "US",
+      "shipping_address": {
+        "recipient_name": "John Doe",
+        "line1": "1 Main St",
+        "city": "San Jose",
+        "country_code": "US",
+        "postal_code": "95131",
+        "state": "CA"
+      }
+    }
+  },
+  "cart": "8BG12616XS115300D",
+  "transactions": [
+    {
+      "related_resources": [
+        {
+          "sale": {
+            "id": "46T669835L689561E",
+            "amount": {
+              "currency": "USD",
+              "total": "718.95",
+              "details": {
+                "subtotal": "718.95",
+                "shipping": "0.00",
+                "handling_fee": "0.00",
+                "shipping_discount": "0.00",
+                "insurance": "0.00"
+              }
+            },
+            "payment_mode": "INSTANT_TRANSFER",
+            "state": "completed",
+            "protection_eligibility": "ELIGIBLE",
+            "protection_eligibility_type": "ITEM_NOT_RECEIVED_ELIGIBLE,UNAUTHORIZED_PAYMENT_ELIGIBLE",
+            "transaction_fee": {
+              "currency": "USD",
+              "value": "25.58"
+            },
+            "parent_payment": "PAYID-M2WI2WA6LK16781EU929825B",
+            "create_time": "2024-08-02T07:40:19Z",
+            "update_time": "2024-08-02T07:40:19Z",
+            "links": [
+              {
+                "href": "https://api.sandbox.paypal.com/v1/payments/sale/46T669835L689561E",
+                "rel": "self",
+                "method": "GET"
+              },
+              {
+                "href": "https://api.sandbox.paypal.com/v1/payments/sale/46T669835L689561E/refund",
+                "rel": "refund",
+                "method": "POST"
+              },
+              {
+                "href": "https://api.sandbox.paypal.com/v1/payments/payment/PAYID-M2WI2WA6LK16781EU929825B",
+                "rel": "parent_payment",
+                "method": "GET"
+              }
+            ]
+          }
+        }
+      ],
+      "amount": {
+        "currency": "USD",
+        "total": "718.95",
+        "details": {
+          "subtotal": "718.95",
+          "shipping": "0.00",
+          "handling_fee": "0.00",
+          "shipping_discount": "0.00",
+          "insurance": "0.00"
+        }
+      },
+      "payee": {
+        "email": "sb-vkj8131074225@business.example.com",
+        "merchant_id": "YUGBVHGSQHYDJ"
+      },
+      "description": "Payment description",
+      "item_list": {
+        "shipping_address": {
+          "recipient_name": "John Doe",
+          "line1": "1 Main St",
+          "city": "San Jose",
+          "country_code": "US",
+          "postal_code": "95131",
+          "state": "CA"
+        }
+      }
+    }
+  ],
+  "failed_transactions": [],
+  "state": "approved",
+  "create_time": "2024-08-02T07:40:07Z",
+  "update_time": "2024-08-02T07:40:19Z",
+  "links": [
+    {
+      "href": "https://api.sandbox.paypal.com/v1/payments/payment/PAYID-M2WI2WA6LK16781EU929825B",
+      "rel": "self",
+      "method": "GET"
+    }
+  ]
+}
+2024-08-02T14:40:21.012+07:00  INFO 14316 --- [CommonService] [http-nio-8009-exec-8] c.l.p.Controller.PaypalController        : Dữ liệu thanh toán: {"id":29844,"userId":2,"items":[{"productId":2,"name":"Sample Productf","price":100.0,"quantity":2,"weight":2,"warehouseIds":"1,2","primaryImageUrl":"/uploads/68c99844-0a28-4bf5-8a99-26ee36e76c6b-o.jpg"}],"selectedShipping":{"id":1,"name":"Ship Thường","pricePerKm":3.0,"pricePerKg":3.0},"distanceData":{"originLatitude":11.623699763447684,"originLongitude":106.63380893803875,"warehouseId":2,"destinationLatitude":10.516610939030933,"destinationLongitude":107.34446195170287,"distance":175.65},"total":718.95}
+2024-08-02T14:40:21.030+07:00  INFO 14316 --- [CommonService] [kafka-producer-network-thread | producer-1] c.l.payment_service.Event.EventProducer  : Message sent to topic PaymentSuccess: {"id":29844,"userId":2,"items":[{"productId":2,"name":"Sample Productf","price":100.0,"quantity":2,"weight":2,"warehouseIds":"1,2","primaryImageUrl":"/uploads/68c99844-0a28-4bf5-8a99-26ee36e76c6b-o.jpg"}],"selectedShipping":{"id":1,"name":"Ship Thường","pricePerKm":3.0,"pricePerKg":3.0},"distanceData":{"originLatitude":11.623699763447684,"originLongitude":106.63380893803875,"warehouseId":2,"destinationLatitude":10.516610939030933,"destinationLongitude":107.34446195170287,"distance":175.65},"total":718.95}
+2024-08-02T14:40:21.031+07:00  INFO 14316 --- [CommonService] [kafka-producer-network-thread | producer-1] c.l.p.Controller.PaypalController        : Sent payment data to Kafka: OK
+2024-08-02T14:40:21.138+07:00 ERROR 14316 --- [CommonService] [http-nio-8009-exec-9] c.l.C.advide.ExceptionAdvide             : Unknown internal server error: No static resource favicon.ico.
+2024-08-02T14:40:21.138+07:00 ERROR 14316 --- [CommonService] [http-nio-8009-exec-9] c.l.C.advide.ExceptionAdvide             : Exception class: class org.springframework.web.servlet.resource.NoResourceFoundException
+2024-08-02T14:40:21.138+07:00 ERROR 14316 --- [CommonService] [http-nio-8009-exec-9] c.l.C.advide.ExceptionAdvide             : Exception cause: null
+2024-08-02T14:42:51.072+07:00  INFO 14316 --- [CommonService] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2024-08-02T15:05:55.867+07:00  INFO 14316 --- [CommonService] [http-nio-8009-exec-3] c.l.p.Controller.PaypalController        : Thanh toán thành công: {
+  "id": "PAYID-M2WJGRY5SR13048T5435530B",
+  "intent": "sale",
+  "payer": {
+    "payment_method": "paypal",
+    "status": "VERIFIED",
+    "payer_info": {
+      "email": "15102002@personal.example.com",
+      "first_name": "John",
+      "last_name": "Doe",
+      "payer_id": "682LVCHCAMN9Q",
+      "country_code": "US",
+      "shipping_address": {
+        "recipient_name": "John Doe",
+        "line1": "1 Main St",
+        "city": "San Jose",
+        "country_code": "US",
+        "postal_code": "95131",
+        "state": "CA"
+      }
+    }
+  },
+  "cart": "8B97384502608640Y",
+  "transactions": [
+    {
+      "related_resources": [
+        {
+          "sale": {
+            "id": "9W2755132L251840A",
+            "amount": {
+              "currency": "USD",
+              "total": "738.95",
+              "details": {
+                "subtotal": "738.95",
+                "shipping": "0.00",
+                "handling_fee": "0.00",
+                "shipping_discount": "0.00",
+                "insurance": "0.00"
+              }
+            },
+            "payment_mode": "INSTANT_TRANSFER",
+            "state": "completed",
+            "protection_eligibility": "ELIGIBLE",
+            "protection_eligibility_type": "ITEM_NOT_RECEIVED_ELIGIBLE,UNAUTHORIZED_PAYMENT_ELIGIBLE",
+            "transaction_fee": {
+              "currency": "USD",
+              "value": "26.28"
+            },
+            "parent_payment": "PAYID-M2WJGRY5SR13048T5435530B",
+            "create_time": "2024-08-02T08:05:53Z",
+            "update_time": "2024-08-02T08:05:53Z",
+            "links": [
+              {
+                "href": "https://api.sandbox.paypal.com/v1/payments/sale/9W2755132L251840A",
+                "rel": "self",
+                "method": "GET"
+              },
+              {
+                "href": "https://api.sandbox.paypal.com/v1/payments/sale/9W2755132L251840A/refund",
+                "rel": "refund",
+                "method": "POST"
+              },
+              {
+                "href": "https://api.sandbox.paypal.com/v1/payments/payment/PAYID-M2WJGRY5SR13048T5435530B",
+                "rel": "parent_payment",
+                "method": "GET"
+              }
+            ]
+          }
+        }
+      ],
+      "amount": {
+        "currency": "USD",
+        "total": "738.95",
+        "details": {
+          "subtotal": "738.95",
+          "shipping": "0.00",
+          "handling_fee": "0.00",
+          "shipping_discount": "0.00",
+          "insurance": "0.00"
+        }
+      },
+      "payee": {
+        "email": "sb-vkj8131074225@business.example.com",
+        "merchant_id": "YUGBVHGSQHYDJ"
+      },
+      "description": "Payment description",
+      "item_list": {
+        "shipping_address": {
+          "recipient_name": "John Doe",
+          "line1": "1 Main St",
+          "city": "San Jose",
+          "country_code": "US",
+          "postal_code": "95131",
+          "state": "CA"
+        }
+      }
+    }
+  ],
+  "failed_transactions": [],
+  "state": "approved",
+  "create_time": "2024-08-02T08:05:27Z",
+  "update_time": "2024-08-02T08:05:53Z",
+  "links": [
+    {
+      "href": "https://api.sandbox.paypal.com/v1/payments/payment/PAYID-M2WJGRY5SR13048T5435530B",
+      "rel": "self",
+      "method": "GET"
+    }
+  ]
+}
+2024-08-02T15:05:55.869+07:00  INFO 14316 --- [CommonService] [http-nio-8009-exec-3] c.l.p.Controller.PaypalController        : Dữ liệu thanh toán: {"id":973249,"userId":2,"items":[{"productId":2,"name":"Sample Productf","price":100.0,"quantity":2,"weight":2,"warehouseIds":"1,2","primaryImageUrl":"/uploads/68c99844-0a28-4bf5-8a99-26ee36e76c6b-o.jpg"}],"selectedShipping":{"id":1,"name":"Ship Thường","pricePerKm":3.0,"pricePerKg":3.0},"distanceData":{"originLatitude":11.623699763447684,"originLongitude":106.63380893803875,"warehouseId":2,"destinationLatitude":10.516610939030933,"destinationLongitude":107.34446195170287,"distance":175.65},"total":738.95}
+2024-08-02T15:05:55.887+07:00  INFO 14316 --- [CommonService] [kafka-producer-network-thread | producer-1] c.l.payment_service.Event.EventProducer  : Message sent to topic PaymentSuccess: {"id":973249,"userId":2,"items":[{"productId":2,"name":"Sample Productf","price":100.0,"quantity":2,"weight":2,"warehouseIds":"1,2","primaryImageUrl":"/uploads/68c99844-0a28-4bf5-8a99-26ee36e76c6b-o.jpg"}],"selectedShipping":{"id":1,"name":"Ship Thường","pricePerKm":3.0,"pricePerKg":3.0},"distanceData":{"originLatitude":11.623699763447684,"originLongitude":106.63380893803875,"warehouseId":2,"destinationLatitude":10.516610939030933,"destinationLongitude":107.34446195170287,"distance":175.65},"total":738.95}
+2024-08-02T15:05:55.888+07:00  INFO 14316 --- [CommonService] [kafka-producer-network-thread | producer-1] c.l.p.Controller.PaypalController        : Sent payment data to Kafka: OK
+2024-08-02T15:05:55.995+07:00 ERROR 14316 --- [CommonService] [http-nio-8009-exec-5] c.l.C.advide.ExceptionAdvide             : Unknown internal server error: No static resource favicon.ico.
+2024-08-02T15:05:55.996+07:00 ERROR 14316 --- [CommonService] [http-nio-8009-exec-5] c.l.C.advide.ExceptionAdvide             : Exception class: class org.springframework.web.servlet.resource.NoResourceFoundException
+2024-08-02T15:05:55.996+07:00 ERROR 14316 --- [CommonService] [http-nio-8009-exec-5] c.l.C.advide.ExceptionAdvide             : Exception cause: null
+2024-08-02T15:11:49.684+07:00  INFO 14316 --- [CommonService] [http-nio-8009-exec-6] c.l.p.Controller.PaypalController        : Thanh toán thành công: {
+  "id": "PAYID-M2WJJPI1G20917762212193F",
+  "intent": "sale",
+  "payer": {
+    "payment_method": "paypal",
+    "status": "VERIFIED",
+    "payer_info": {
+      "email": "15102002@personal.example.com",
+      "first_name": "John",
+      "last_name": "Doe",
+      "payer_id": "682LVCHCAMN9Q",
+      "country_code": "US",
+      "shipping_address": {
+        "recipient_name": "John Doe",
+        "line1": "1 Main St",
+        "city": "San Jose",
+        "country_code": "US",
+        "postal_code": "95131",
+        "state": "CA"
+      }
+    }
+  },
+  "cart": "0TP75833K6773242S",
+  "transactions": [
+    {
+      "related_resources": [
+        {
+          "sale": {
+            "id": "45J772858J686922M",
+            "amount": {
+              "currency": "USD",
+              "total": "738.95",
+              "details": {
+                "subtotal": "738.95",
+                "shipping": "0.00",
+                "handling_fee": "0.00",
+                "shipping_discount": "0.00",
+                "insurance": "0.00"
+              }
+            },
+            "payment_mode": "INSTANT_TRANSFER",
+            "state": "completed",
+            "protection_eligibility": "ELIGIBLE",
+            "protection_eligibility_type": "ITEM_NOT_RECEIVED_ELIGIBLE,UNAUTHORIZED_PAYMENT_ELIGIBLE",
+            "transaction_fee": {
+              "currency": "USD",
+              "value": "26.28"
+            },
+            "parent_payment": "PAYID-M2WJJPI1G20917762212193F",
+            "create_time": "2024-08-02T08:11:48Z",
+            "update_time": "2024-08-02T08:11:48Z",
+            "links": [
+              {
+                "href": "https://api.sandbox.paypal.com/v1/payments/sale/45J772858J686922M",
+                "rel": "self",
+                "method": "GET"
+              },
+              {
+                "href": "https://api.sandbox.paypal.com/v1/payments/sale/45J772858J686922M/refund",
+                "rel": "refund",
+                "method": "POST"
+              },
+              {
+                "href": "https://api.sandbox.paypal.com/v1/payments/payment/PAYID-M2WJJPI1G20917762212193F",
+                "rel": "parent_payment",
+                "method": "GET"
+              }
+            ]
+          }
+        }
+      ],
+      "amount": {
+        "currency": "USD",
+        "total": "738.95",
+        "details": {
+          "subtotal": "738.95",
+          "shipping": "0.00",
+          "handling_fee": "0.00",
+          "shipping_discount": "0.00",
+          "insurance": "0.00"
+        }
+      },
+      "payee": {
+        "email": "sb-vkj8131074225@business.example.com",
+        "merchant_id": "YUGBVHGSQHYDJ"
+      },
+      "description": "Payment description",
+      "item_list": {
+        "shipping_address": {
+          "recipient_name": "John Doe",
+          "line1": "1 Main St",
+          "city": "San Jose",
+          "country_code": "US",
+          "postal_code": "95131",
+          "state": "CA"
+        }
+      }
+    }
+  ],
+  "failed_transactions": [],
+  "state": "approved",
+  "create_time": "2024-08-02T08:11:40Z",
+  "update_time": "2024-08-02T08:11:48Z",
+  "links": [
+    {
+      "href": "https://api.sandbox.paypal.com/v1/payments/payment/PAYID-M2WJJPI1G20917762212193F",
+      "rel": "self",
+      "method": "GET"
+    }
+  ]
+}
+2024-08-02T15:11:49.686+07:00  INFO 14316 --- [CommonService] [http-nio-8009-exec-6] c.l.p.Controller.PaypalController        : Dữ liệu thanh toán: {"id":132725,"userId":2,"items":[{"productId":2,"name":"Sample Productf","price":100.0,"quantity":2,"weight":2,"warehouseIds":"1,2","primaryImageUrl":"/uploads/68c99844-0a28-4bf5-8a99-26ee36e76c6b-o.jpg"}],"selectedShipping":{"id":1,"name":"Ship Thường","pricePerKm":3.0,"pricePerKg":3.0},"distanceData":{"originLatitude":11.623699763447684,"originLongitude":106.63380893803875,"warehouseId":2,"destinationLatitude":10.516610939030933,"destinationLongitude":107.34446195170287,"distance":175.65},"total":738.95}
+2024-08-02T15:11:49.695+07:00  INFO 14316 --- [CommonService] [kafka-producer-network-thread | producer-1] c.l.payment_service.Event.EventProducer  : Message sent to topic PaymentSuccess: {"id":132725,"userId":2,"items":[{"productId":2,"name":"Sample Productf","price":100.0,"quantity":2,"weight":2,"warehouseIds":"1,2","primaryImageUrl":"/uploads/68c99844-0a28-4bf5-8a99-26ee36e76c6b-o.jpg"}],"selectedShipping":{"id":1,"name":"Ship Thường","pricePerKm":3.0,"pricePerKg":3.0},"distanceData":{"originLatitude":11.623699763447684,"originLongitude":106.63380893803875,"warehouseId":2,"destinationLatitude":10.516610939030933,"destinationLongitude":107.34446195170287,"distance":175.65},"total":738.95}
+2024-08-02T15:11:49.696+07:00  INFO 14316 --- [CommonService] [kafka-producer-network-thread | producer-1] c.l.p.Controller.PaypalController        : Sent payment data to Kafka: OK
+2024-08-02T15:11:49.778+07:00 ERROR 14316 --- [CommonService] [http-nio-8009-exec-8] c.l.C.advide.ExceptionAdvide             : Unknown internal server error: No static resource favicon.ico.
+2024-08-02T15:11:49.778+07:00 ERROR 14316 --- [CommonService] [http-nio-8009-exec-8] c.l.C.advide.ExceptionAdvide             : Exception class: class org.springframework.web.servlet.resource.NoResourceFoundException
+2024-08-02T15:11:49.779+07:00 ERROR 14316 --- [CommonService] [http-nio-8009-exec-8] c.l.C.advide.ExceptionAdvide             : Exception cause: null
+2024-08-02T15:23:13.401+07:00  INFO 14316 --- [CommonService] [SpringApplicationShutdownHook] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+2024-08-02T15:23:13.410+07:00  INFO 14316 --- [CommonService] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2024-08-02T15:23:13.411+07:00  INFO 14316 --- [CommonService] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-08-02T15:23:13.411+07:00  INFO 14316 --- [CommonService] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2024-08-02T15:23:13.411+07:00  INFO 14316 --- [CommonService] [SpringApplicationShutdownHook] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for producer-1 unregistered
+2024-08-02T15:23:21.232+07:00  INFO 9368 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Starting PaymentServiceApplication using Java 17.0.7 with PID 9368 (C:\CODE\FINAL MAIN\test2\payment-service\target\classes started by ASUS in C:\CODE\FINAL MAIN\test2\OrderService)
+2024-08-02T15:23:21.234+07:00 DEBUG 9368 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Running with Spring Boot v3.2.7-SNAPSHOT, Spring v6.1.10
+2024-08-02T15:23:21.235+07:00  INFO 9368 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : No active profile set, falling back to 1 default profile: "default"
+2024-08-02T15:23:22.421+07:00  INFO 9368 --- [CommonService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8009 (http)
+2024-08-02T15:23:22.432+07:00  INFO 9368 --- [CommonService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-02T15:23:22.432+07:00  INFO 9368 --- [CommonService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-08-02T15:23:22.493+07:00  INFO 9368 --- [CommonService] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-02T15:23:22.493+07:00  INFO 9368 --- [CommonService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1215 ms
+2024-08-02T15:23:22.985+07:00  WARN 9368 --- [CommonService] [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-08-02T15:23:23.189+07:00  INFO 9368 --- [CommonService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8009 (http) with context path ''
+2024-08-02T15:23:23.202+07:00  INFO 9368 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Started PaymentServiceApplication in 2.523 seconds (process running for 3.595)
+2024-08-02T15:24:02.840+07:00  INFO 9368 --- [CommonService] [http-nio-8009-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-02T15:24:02.840+07:00  INFO 9368 --- [CommonService] [http-nio-8009-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-02T15:24:02.841+07:00  INFO 9368 --- [CommonService] [http-nio-8009-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-08-02T15:24:18.000+07:00  INFO 9368 --- [CommonService] [http-nio-8009-exec-2] c.l.p.Controller.PaypalController        : Thanh toán thành công: {
+  "id": "PAYID-M2WJPJI9AP95191MY7298942",
+  "intent": "sale",
+  "payer": {
+    "payment_method": "paypal",
+    "status": "VERIFIED",
+    "payer_info": {
+      "email": "15102002@personal.example.com",
+      "first_name": "John",
+      "last_name": "Doe",
+      "payer_id": "682LVCHCAMN9Q",
+      "country_code": "US",
+      "shipping_address": {
+        "recipient_name": "John Doe",
+        "line1": "1 Main St",
+        "city": "San Jose",
+        "country_code": "US",
+        "postal_code": "95131",
+        "state": "CA"
+      }
+    }
+  },
+  "cart": "8MD67805NL603551B",
+  "transactions": [
+    {
+      "related_resources": [
+        {
+          "sale": {
+            "id": "6KY190354X0978020",
+            "amount": {
+              "currency": "USD",
+              "total": "738.95",
+              "details": {
+                "subtotal": "738.95",
+                "shipping": "0.00",
+                "handling_fee": "0.00",
+                "shipping_discount": "0.00",
+                "insurance": "0.00"
+              }
+            },
+            "payment_mode": "INSTANT_TRANSFER",
+            "state": "completed",
+            "protection_eligibility": "ELIGIBLE",
+            "protection_eligibility_type": "ITEM_NOT_RECEIVED_ELIGIBLE,UNAUTHORIZED_PAYMENT_ELIGIBLE",
+            "transaction_fee": {
+              "currency": "USD",
+              "value": "26.28"
+            },
+            "parent_payment": "PAYID-M2WJPJI9AP95191MY7298942",
+            "create_time": "2024-08-02T08:24:16Z",
+            "update_time": "2024-08-02T08:24:16Z",
+            "links": [
+              {
+                "href": "https://api.sandbox.paypal.com/v1/payments/sale/6KY190354X0978020",
+                "rel": "self",
+                "method": "GET"
+              },
+              {
+                "href": "https://api.sandbox.paypal.com/v1/payments/sale/6KY190354X0978020/refund",
+                "rel": "refund",
+                "method": "POST"
+              },
+              {
+                "href": "https://api.sandbox.paypal.com/v1/payments/payment/PAYID-M2WJPJI9AP95191MY7298942",
+                "rel": "parent_payment",
+                "method": "GET"
+              }
+            ]
+          }
+        }
+      ],
+      "amount": {
+        "currency": "USD",
+        "total": "738.95",
+        "details": {
+          "subtotal": "738.95",
+          "shipping": "0.00",
+          "handling_fee": "0.00",
+          "shipping_discount": "0.00",
+          "insurance": "0.00"
+        }
+      },
+      "payee": {
+        "email": "sb-vkj8131074225@business.example.com",
+        "merchant_id": "YUGBVHGSQHYDJ"
+      },
+      "description": "Payment description",
+      "item_list": {
+        "shipping_address": {
+          "recipient_name": "John Doe",
+          "line1": "1 Main St",
+          "city": "San Jose",
+          "country_code": "US",
+          "postal_code": "95131",
+          "state": "CA"
+        }
+      }
+    }
+  ],
+  "failed_transactions": [],
+  "state": "approved",
+  "create_time": "2024-08-02T08:24:04Z",
+  "update_time": "2024-08-02T08:24:16Z",
+  "links": [
+    {
+      "href": "https://api.sandbox.paypal.com/v1/payments/payment/PAYID-M2WJPJI9AP95191MY7298942",
+      "rel": "self",
+      "method": "GET"
+    }
+  ]
+}
+2024-08-02T15:24:18.005+07:00  INFO 9368 --- [CommonService] [http-nio-8009-exec-2] c.l.p.Controller.PaypalController        : Dữ liệu thanh toán: {"id":262163,"userId":2,"items":[{"productId":2,"name":"Sample Productf","price":100.0,"quantity":2,"weight":2,"warehouseIds":"1,2","primaryImageUrl":"/uploads/68c99844-0a28-4bf5-8a99-26ee36e76c6b-o.jpg"}],"selectedShipping":{"id":1,"name":"Ship Thường","pricePerKm":3.0,"pricePerKg":3.0},"distanceData":{"userId":0,"receiverName":"fff","provinceCity":"Tỉnh Bình Phước","district":"Huyện Hớn Quản","ward":"Xã Phước An","street":"hghghg","originLatitude":11.623699763447684,"originLongitude":106.63380893803875,"warehouseId":2,"warehouseName":"đasad","warehouseProvinceCity":"Tỉnh Bà Rịa - Vũng Tàu","warehouseDistrict":"Huyện Đất Đỏ","warehouseWard":"Xã Láng Dài","destinationLatitude":10.516610939030933,"destinationLongitude":107.34446195170287,"distance":175.65},"total":738.95}
+2024-08-02T15:24:18.083+07:00  INFO 9368 --- [CommonService] [http-nio-8009-exec-2] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2024-08-02T15:24:18.119+07:00  INFO 9368 --- [CommonService] [http-nio-8009-exec-2] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2024-08-02T15:24:18.187+07:00  INFO 9368 --- [CommonService] [http-nio-8009-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.2
+2024-08-02T15:24:18.187+07:00  INFO 9368 --- [CommonService] [http-nio-8009-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c4deed513057c94e
+2024-08-02T15:24:18.187+07:00  INFO 9368 --- [CommonService] [http-nio-8009-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1722587058185
+2024-08-02T15:24:18.298+07:00 ERROR 9368 --- [CommonService] [http-nio-8009-exec-8] c.l.C.advide.ExceptionAdvide             : Unknown internal server error: No static resource favicon.ico.
+2024-08-02T15:24:18.299+07:00 ERROR 9368 --- [CommonService] [http-nio-8009-exec-8] c.l.C.advide.ExceptionAdvide             : Exception class: class org.springframework.web.servlet.resource.NoResourceFoundException
+2024-08-02T15:24:18.299+07:00 ERROR 9368 --- [CommonService] [http-nio-8009-exec-8] c.l.C.advide.ExceptionAdvide             : Exception cause: null
+2024-08-02T15:24:18.683+07:00  INFO 9368 --- [CommonService] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: viDAuDrvQM-vsXuoC_W1_Q
+2024-08-02T15:24:18.684+07:00  INFO 9368 --- [CommonService] [kafka-producer-network-thread | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 38001 with epoch 0
+2024-08-02T15:24:18.724+07:00  INFO 9368 --- [CommonService] [kafka-producer-network-thread | producer-1] c.l.payment_service.Event.EventProducer  : Message sent to topic PaymentSuccess: {"id":262163,"userId":2,"items":[{"productId":2,"name":"Sample Productf","price":100.0,"quantity":2,"weight":2,"warehouseIds":"1,2","primaryImageUrl":"/uploads/68c99844-0a28-4bf5-8a99-26ee36e76c6b-o.jpg"}],"selectedShipping":{"id":1,"name":"Ship Thường","pricePerKm":3.0,"pricePerKg":3.0},"distanceData":{"userId":0,"receiverName":"fff","provinceCity":"Tỉnh Bình Phước","district":"Huyện Hớn Quản","ward":"Xã Phước An","street":"hghghg","originLatitude":11.623699763447684,"originLongitude":106.63380893803875,"warehouseId":2,"warehouseName":"đasad","warehouseProvinceCity":"Tỉnh Bà Rịa - Vũng Tàu","warehouseDistrict":"Huyện Đất Đỏ","warehouseWard":"Xã Láng Dài","destinationLatitude":10.516610939030933,"destinationLongitude":107.34446195170287,"distance":175.65},"total":738.95}
+2024-08-02T15:24:18.724+07:00  INFO 9368 --- [CommonService] [kafka-producer-network-thread | producer-1] c.l.p.Controller.PaypalController        : Sent payment data to Kafka: OK
+2024-08-02T15:33:18.750+07:00  INFO 9368 --- [CommonService] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2024-08-02T15:45:21.932+07:00  INFO 9368 --- [CommonService] [http-nio-8009-exec-3] c.l.p.Controller.PaypalController        : Thanh toán thành công: {
+  "id": "PAYID-M2WJZDY9DG78996G6686393S",
+  "intent": "sale",
+  "payer": {
+    "payment_method": "paypal",
+    "status": "VERIFIED",
+    "payer_info": {
+      "email": "15102002@personal.example.com",
+      "first_name": "John",
+      "last_name": "Doe",
+      "payer_id": "682LVCHCAMN9Q",
+      "country_code": "US",
+      "shipping_address": {
+        "recipient_name": "John Doe",
+        "line1": "1 Main St",
+        "city": "San Jose",
+        "country_code": "US",
+        "postal_code": "95131",
+        "state": "CA"
+      }
+    }
+  },
+  "cart": "29148275NH0738905",
+  "transactions": [
+    {
+      "related_resources": [
+        {
+          "sale": {
+            "id": "8HM19118E3812902E",
+            "amount": {
+              "currency": "USD",
+              "total": "2879.95",
+              "details": {
+                "subtotal": "2879.95",
+                "shipping": "0.00",
+                "handling_fee": "0.00",
+                "shipping_discount": "0.00",
+                "insurance": "0.00"
+              }
+            },
+            "payment_mode": "INSTANT_TRANSFER",
+            "state": "completed",
+            "protection_eligibility": "ELIGIBLE",
+            "protection_eligibility_type": "ITEM_NOT_RECEIVED_ELIGIBLE,UNAUTHORIZED_PAYMENT_ELIGIBLE",
+            "transaction_fee": {
+              "currency": "USD",
+              "value": "101.00"
+            },
+            "parent_payment": "PAYID-M2WJZDY9DG78996G6686393S",
+            "create_time": "2024-08-02T08:45:20Z",
+            "update_time": "2024-08-02T08:45:20Z",
+            "links": [
+              {
+                "href": "https://api.sandbox.paypal.com/v1/payments/sale/8HM19118E3812902E",
+                "rel": "self",
+                "method": "GET"
+              },
+              {
+                "href": "https://api.sandbox.paypal.com/v1/payments/sale/8HM19118E3812902E/refund",
+                "rel": "refund",
+                "method": "POST"
+              },
+              {
+                "href": "https://api.sandbox.paypal.com/v1/payments/payment/PAYID-M2WJZDY9DG78996G6686393S",
+                "rel": "parent_payment",
+                "method": "GET"
+              }
+            ]
+          }
+        }
+      ],
+      "amount": {
+        "currency": "USD",
+        "total": "2879.95",
+        "details": {
+          "subtotal": "2879.95",
+          "shipping": "0.00",
+          "handling_fee": "0.00",
+          "shipping_discount": "0.00",
+          "insurance": "0.00"
+        }
+      },
+      "payee": {
+        "email": "sb-vkj8131074225@business.example.com",
+        "merchant_id": "YUGBVHGSQHYDJ"
+      },
+      "description": "Payment description",
+      "item_list": {
+        "shipping_address": {
+          "recipient_name": "John Doe",
+          "line1": "1 Main St",
+          "city": "San Jose",
+          "country_code": "US",
+          "postal_code": "95131",
+          "state": "CA"
+        }
+      }
+    }
+  ],
+  "failed_transactions": [],
+  "state": "approved",
+  "create_time": "2024-08-02T08:45:02Z",
+  "update_time": "2024-08-02T08:45:20Z",
+  "links": [
+    {
+      "href": "https://api.sandbox.paypal.com/v1/payments/payment/PAYID-M2WJZDY9DG78996G6686393S",
+      "rel": "self",
+      "method": "GET"
+    }
+  ]
+}
+2024-08-02T15:45:21.933+07:00  INFO 9368 --- [CommonService] [http-nio-8009-exec-3] c.l.p.Controller.PaypalController        : Dữ liệu thanh toán: {"id":392788,"userId":2,"items":[{"productId":4,"name":"ewqrefwq","price":22.0,"quantity":1,"weight":777,"warehouseIds":"1,2,3","primaryImageUrl":"/uploads/1a667bc7-11aa-4867-9cb8-4746a65587c6-Screenshot 2024-07-12 135940.png"}],"selectedShipping":{"id":1,"name":"Ship Thường","pricePerKm":3.0,"pricePerKg":3.0},"distanceData":{"userId":0,"receiverName":"fff","provinceCity":"Tỉnh Bình Phước","district":"Huyện Hớn Quản","ward":"Xã Phước An","street":"hghghg","originLatitude":11.623699763447684,"originLongitude":106.63380893803875,"warehouseId":2,"warehouseName":"đasad","warehouseProvinceCity":"Tỉnh Bà Rịa - Vũng Tàu","warehouseDistrict":"Huyện Đất Đỏ","warehouseWard":"Xã Láng Dài","destinationLatitude":10.516610939030933,"destinationLongitude":107.34446195170287,"distance":175.65},"total":2879.95}
+2024-08-02T15:45:21.951+07:00  INFO 9368 --- [CommonService] [kafka-producer-network-thread | producer-1] c.l.payment_service.Event.EventProducer  : Message sent to topic PaymentSuccess: {"id":392788,"userId":2,"items":[{"productId":4,"name":"ewqrefwq","price":22.0,"quantity":1,"weight":777,"warehouseIds":"1,2,3","primaryImageUrl":"/uploads/1a667bc7-11aa-4867-9cb8-4746a65587c6-Screenshot 2024-07-12 135940.png"}],"selectedShipping":{"id":1,"name":"Ship Thường","pricePerKm":3.0,"pricePerKg":3.0},"distanceData":{"userId":0,"receiverName":"fff","provinceCity":"Tỉnh Bình Phước","district":"Huyện Hớn Quản","ward":"Xã Phước An","street":"hghghg","originLatitude":11.623699763447684,"originLongitude":106.63380893803875,"warehouseId":2,"warehouseName":"đasad","warehouseProvinceCity":"Tỉnh Bà Rịa - Vũng Tàu","warehouseDistrict":"Huyện Đất Đỏ","warehouseWard":"Xã Láng Dài","destinationLatitude":10.516610939030933,"destinationLongitude":107.34446195170287,"distance":175.65},"total":2879.95}
+2024-08-02T15:45:21.951+07:00  INFO 9368 --- [CommonService] [kafka-producer-network-thread | producer-1] c.l.p.Controller.PaypalController        : Sent payment data to Kafka: OK
+2024-08-02T15:45:22.060+07:00 ERROR 9368 --- [CommonService] [http-nio-8009-exec-9] c.l.C.advide.ExceptionAdvide             : Unknown internal server error: No static resource favicon.ico.
+2024-08-02T15:45:22.060+07:00 ERROR 9368 --- [CommonService] [http-nio-8009-exec-9] c.l.C.advide.ExceptionAdvide             : Exception class: class org.springframework.web.servlet.resource.NoResourceFoundException
+2024-08-02T15:45:22.060+07:00 ERROR 9368 --- [CommonService] [http-nio-8009-exec-9] c.l.C.advide.ExceptionAdvide             : Exception cause: null
+2024-08-02T15:47:28.292+07:00  INFO 9368 --- [CommonService] [http-nio-8009-exec-2] c.l.p.Controller.PaypalController        : Thanh toán thành công: {
+  "id": "PAYID-M2WJ2FI0TV78001AT330084R",
+  "intent": "sale",
+  "payer": {
+    "payment_method": "paypal",
+    "status": "VERIFIED",
+    "payer_info": {
+      "email": "15102002@personal.example.com",
+      "first_name": "John",
+      "last_name": "Doe",
+      "payer_id": "682LVCHCAMN9Q",
+      "country_code": "US",
+      "shipping_address": {
+        "recipient_name": "John Doe",
+        "line1": "1 Main St",
+        "city": "San Jose",
+        "country_code": "US",
+        "postal_code": "95131",
+        "state": "CA"
+      }
+    }
+  },
+  "cart": "2WD543850L516473S",
+  "transactions": [
+    {
+      "related_resources": [
+        {
+          "sale": {
+            "id": "8B7744431N3261447",
+            "amount": {
+              "currency": "USD",
+              "total": "738.95",
+              "details": {
+                "subtotal": "738.95",
+                "shipping": "0.00",
+                "handling_fee": "0.00",
+                "shipping_discount": "0.00",
+                "insurance": "0.00"
+              }
+            },
+            "payment_mode": "INSTANT_TRANSFER",
+            "state": "completed",
+            "protection_eligibility": "ELIGIBLE",
+            "protection_eligibility_type": "ITEM_NOT_RECEIVED_ELIGIBLE,UNAUTHORIZED_PAYMENT_ELIGIBLE",
+            "transaction_fee": {
+              "currency": "USD",
+              "value": "26.28"
+            },
+            "parent_payment": "PAYID-M2WJ2FI0TV78001AT330084R",
+            "create_time": "2024-08-02T08:47:26Z",
+            "update_time": "2024-08-02T08:47:26Z",
+            "links": [
+              {
+                "href": "https://api.sandbox.paypal.com/v1/payments/sale/8B7744431N3261447",
+                "rel": "self",
+                "method": "GET"
+              },
+              {
+                "href": "https://api.sandbox.paypal.com/v1/payments/sale/8B7744431N3261447/refund",
+                "rel": "refund",
+                "method": "POST"
+              },
+              {
+                "href": "https://api.sandbox.paypal.com/v1/payments/payment/PAYID-M2WJ2FI0TV78001AT330084R",
+                "rel": "parent_payment",
+                "method": "GET"
+              }
+            ]
+          }
+        }
+      ],
+      "amount": {
+        "currency": "USD",
+        "total": "738.95",
+        "details": {
+          "subtotal": "738.95",
+          "shipping": "0.00",
+          "handling_fee": "0.00",
+          "shipping_discount": "0.00",
+          "insurance": "0.00"
+        }
+      },
+      "payee": {
+        "email": "sb-vkj8131074225@business.example.com",
+        "merchant_id": "YUGBVHGSQHYDJ"
+      },
+      "description": "Payment description",
+      "item_list": {
+        "shipping_address": {
+          "recipient_name": "John Doe",
+          "line1": "1 Main St",
+          "city": "San Jose",
+          "country_code": "US",
+          "postal_code": "95131",
+          "state": "CA"
+        }
+      }
+    }
+  ],
+  "failed_transactions": [],
+  "state": "approved",
+  "create_time": "2024-08-02T08:47:17Z",
+  "update_time": "2024-08-02T08:47:26Z",
+  "links": [
+    {
+      "href": "https://api.sandbox.paypal.com/v1/payments/payment/PAYID-M2WJ2FI0TV78001AT330084R",
+      "rel": "self",
+      "method": "GET"
+    }
+  ]
+}
+2024-08-02T15:47:28.293+07:00  INFO 9368 --- [CommonService] [http-nio-8009-exec-2] c.l.p.Controller.PaypalController        : Dữ liệu thanh toán: {"id":919500,"userId":2,"items":[{"productId":2,"name":"Sample Productf","price":100.0,"quantity":2,"weight":2,"warehouseIds":"1,2","primaryImageUrl":"/uploads/68c99844-0a28-4bf5-8a99-26ee36e76c6b-o.jpg"}],"selectedShipping":{"id":1,"name":"Ship Thường","pricePerKm":3.0,"pricePerKg":3.0},"distanceData":{"userId":0,"receiverName":"fff","provinceCity":"Tỉnh Bình Phước","district":"Huyện Hớn Quản","ward":"Xã Phước An","street":"hghghg","originLatitude":11.623699763447684,"originLongitude":106.63380893803875,"warehouseId":2,"warehouseName":"đasad","warehouseProvinceCity":"Tỉnh Bà Rịa - Vũng Tàu","warehouseDistrict":"Huyện Đất Đỏ","warehouseWard":"Xã Láng Dài","destinationLatitude":10.516610939030933,"destinationLongitude":107.34446195170287,"distance":175.65},"total":738.95}
+2024-08-02T15:47:28.298+07:00  INFO 9368 --- [CommonService] [kafka-producer-network-thread | producer-1] c.l.payment_service.Event.EventProducer  : Message sent to topic PaymentSuccess: {"id":919500,"userId":2,"items":[{"productId":2,"name":"Sample Productf","price":100.0,"quantity":2,"weight":2,"warehouseIds":"1,2","primaryImageUrl":"/uploads/68c99844-0a28-4bf5-8a99-26ee36e76c6b-o.jpg"}],"selectedShipping":{"id":1,"name":"Ship Thường","pricePerKm":3.0,"pricePerKg":3.0},"distanceData":{"userId":0,"receiverName":"fff","provinceCity":"Tỉnh Bình Phước","district":"Huyện Hớn Quản","ward":"Xã Phước An","street":"hghghg","originLatitude":11.623699763447684,"originLongitude":106.63380893803875,"warehouseId":2,"warehouseName":"đasad","warehouseProvinceCity":"Tỉnh Bà Rịa - Vũng Tàu","warehouseDistrict":"Huyện Đất Đỏ","warehouseWard":"Xã Láng Dài","destinationLatitude":10.516610939030933,"destinationLongitude":107.34446195170287,"distance":175.65},"total":738.95}
+2024-08-02T15:47:28.299+07:00  INFO 9368 --- [CommonService] [kafka-producer-network-thread | producer-1] c.l.p.Controller.PaypalController        : Sent payment data to Kafka: OK
+2024-08-02T15:47:28.350+07:00 ERROR 9368 --- [CommonService] [http-nio-8009-exec-8] c.l.C.advide.ExceptionAdvide             : Unknown internal server error: No static resource favicon.ico.
+2024-08-02T15:47:28.351+07:00 ERROR 9368 --- [CommonService] [http-nio-8009-exec-8] c.l.C.advide.ExceptionAdvide             : Exception class: class org.springframework.web.servlet.resource.NoResourceFoundException
+2024-08-02T15:47:28.351+07:00 ERROR 9368 --- [CommonService] [http-nio-8009-exec-8] c.l.C.advide.ExceptionAdvide             : Exception cause: null
+2024-08-02T16:20:39.869+07:00  INFO 9368 --- [CommonService] [http-nio-8009-exec-6] c.l.p.Controller.PaypalController        : Thanh toán thành công: {
+  "id": "PAYID-M2WKJVI5G676867J7675032M",
+  "intent": "sale",
+  "payer": {
+    "payment_method": "paypal",
+    "status": "VERIFIED",
+    "payer_info": {
+      "email": "15102002@personal.example.com",
+      "first_name": "John",
+      "last_name": "Doe",
+      "payer_id": "682LVCHCAMN9Q",
+      "country_code": "US",
+      "shipping_address": {
+        "recipient_name": "John Doe",
+        "line1": "1 Main St",
+        "city": "San Jose",
+        "country_code": "US",
+        "postal_code": "95131",
+        "state": "CA"
+      }
+    }
+  },
+  "cart": "91097896628282722",
+  "transactions": [
+    {
+      "related_resources": [
+        {
+          "sale": {
+            "id": "8VH58766NX050511T",
+            "amount": {
+              "currency": "USD",
+              "total": "738.95",
+              "details": {
+                "subtotal": "738.95",
+                "shipping": "0.00",
+                "handling_fee": "0.00",
+                "shipping_discount": "0.00",
+                "insurance": "0.00"
+              }
+            },
+            "payment_mode": "INSTANT_TRANSFER",
+            "state": "completed",
+            "protection_eligibility": "ELIGIBLE",
+            "protection_eligibility_type": "ITEM_NOT_RECEIVED_ELIGIBLE,UNAUTHORIZED_PAYMENT_ELIGIBLE",
+            "transaction_fee": {
+              "currency": "USD",
+              "value": "26.28"
+            },
+            "parent_payment": "PAYID-M2WKJVI5G676867J7675032M",
+            "create_time": "2024-08-02T09:20:38Z",
+            "update_time": "2024-08-02T09:20:38Z",
+            "links": [
+              {
+                "href": "https://api.sandbox.paypal.com/v1/payments/sale/8VH58766NX050511T",
+                "rel": "self",
+                "method": "GET"
+              },
+              {
+                "href": "https://api.sandbox.paypal.com/v1/payments/sale/8VH58766NX050511T/refund",
+                "rel": "refund",
+                "method": "POST"
+              },
+              {
+                "href": "https://api.sandbox.paypal.com/v1/payments/payment/PAYID-M2WKJVI5G676867J7675032M",
+                "rel": "parent_payment",
+                "method": "GET"
+              }
+            ]
+          }
+        }
+      ],
+      "amount": {
+        "currency": "USD",
+        "total": "738.95",
+        "details": {
+          "subtotal": "738.95",
+          "shipping": "0.00",
+          "handling_fee": "0.00",
+          "shipping_discount": "0.00",
+          "insurance": "0.00"
+        }
+      },
+      "payee": {
+        "email": "sb-vkj8131074225@business.example.com",
+        "merchant_id": "YUGBVHGSQHYDJ"
+      },
+      "description": "Payment description",
+      "item_list": {
+        "shipping_address": {
+          "recipient_name": "John Doe",
+          "line1": "1 Main St",
+          "city": "San Jose",
+          "country_code": "US",
+          "postal_code": "95131",
+          "state": "CA"
+        }
+      }
+    }
+  ],
+  "failed_transactions": [],
+  "state": "approved",
+  "create_time": "2024-08-02T09:20:20Z",
+  "update_time": "2024-08-02T09:20:38Z",
+  "links": [
+    {
+      "href": "https://api.sandbox.paypal.com/v1/payments/payment/PAYID-M2WKJVI5G676867J7675032M",
+      "rel": "self",
+      "method": "GET"
+    }
+  ]
+}
+2024-08-02T16:20:39.882+07:00  INFO 9368 --- [CommonService] [http-nio-8009-exec-6] c.l.p.Controller.PaypalController        : Dữ liệu thanh toán: {"id":711013,"userId":2,"items":[{"productId":2,"name":"Sample Productf","price":100.0,"quantity":2,"weight":2,"warehouseIds":"1,2","primaryImageUrl":"/uploads/68c99844-0a28-4bf5-8a99-26ee36e76c6b-o.jpg"}],"selectedShipping":{"id":1,"name":"Ship Thường","pricePerKm":3.0,"pricePerKg":3.0},"distanceData":{"userId":0,"receiverName":"fff","provinceCity":"Tỉnh Bình Phước","district":"Huyện Hớn Quản","ward":"Xã Phước An","street":"hghghg","originLatitude":11.623699763447684,"originLongitude":106.63380893803875,"warehouseId":2,"warehouseName":"đasad","warehouseProvinceCity":"Tỉnh Bà Rịa - Vũng Tàu","warehouseDistrict":"Huyện Đất Đỏ","warehouseWard":"Xã Láng Dài","destinationLatitude":10.516610939030933,"destinationLongitude":107.34446195170287,"distance":175.65},"total":738.95}
+2024-08-02T16:20:39.923+07:00  INFO 9368 --- [CommonService] [kafka-producer-network-thread | producer-1] c.l.payment_service.Event.EventProducer  : Message sent to topic PaymentSuccess: {"id":711013,"userId":2,"items":[{"productId":2,"name":"Sample Productf","price":100.0,"quantity":2,"weight":2,"warehouseIds":"1,2","primaryImageUrl":"/uploads/68c99844-0a28-4bf5-8a99-26ee36e76c6b-o.jpg"}],"selectedShipping":{"id":1,"name":"Ship Thường","pricePerKm":3.0,"pricePerKg":3.0},"distanceData":{"userId":0,"receiverName":"fff","provinceCity":"Tỉnh Bình Phước","district":"Huyện Hớn Quản","ward":"Xã Phước An","street":"hghghg","originLatitude":11.623699763447684,"originLongitude":106.63380893803875,"warehouseId":2,"warehouseName":"đasad","warehouseProvinceCity":"Tỉnh Bà Rịa - Vũng Tàu","warehouseDistrict":"Huyện Đất Đỏ","warehouseWard":"Xã Láng Dài","destinationLatitude":10.516610939030933,"destinationLongitude":107.34446195170287,"distance":175.65},"total":738.95}
+2024-08-02T16:20:39.924+07:00  INFO 9368 --- [CommonService] [kafka-producer-network-thread | producer-1] c.l.p.Controller.PaypalController        : Sent payment data to Kafka: OK
+2024-08-02T16:20:40.080+07:00 ERROR 9368 --- [CommonService] [http-nio-8009-exec-7] c.l.C.advide.ExceptionAdvide             : Unknown internal server error: No static resource favicon.ico.
+2024-08-02T16:20:40.081+07:00 ERROR 9368 --- [CommonService] [http-nio-8009-exec-7] c.l.C.advide.ExceptionAdvide             : Exception class: class org.springframework.web.servlet.resource.NoResourceFoundException
+2024-08-02T16:20:40.081+07:00 ERROR 9368 --- [CommonService] [http-nio-8009-exec-7] c.l.C.advide.ExceptionAdvide             : Exception cause: null
+2024-08-02T16:35:40.322+07:00  INFO 9368 --- [CommonService] [http-nio-8009-exec-2] c.l.p.Controller.PaypalController        : Thanh toán thành công: {
+  "id": "PAYID-M2WKQXQ14R47235CR2758817",
+  "intent": "sale",
+  "payer": {
+    "payment_method": "paypal",
+    "status": "VERIFIED",
+    "payer_info": {
+      "email": "15102002@personal.example.com",
+      "first_name": "John",
+      "last_name": "Doe",
+      "payer_id": "682LVCHCAMN9Q",
+      "country_code": "US",
+      "shipping_address": {
+        "recipient_name": "John Doe",
+        "line1": "1 Main St",
+        "city": "San Jose",
+        "country_code": "US",
+        "postal_code": "95131",
+        "state": "CA"
+      }
+    }
+  },
+  "cart": "5X726300R20440725",
+  "transactions": [
+    {
+      "related_resources": [
+        {
+          "sale": {
+            "id": "72677872SC138384V",
+            "amount": {
+              "currency": "USD",
+              "total": "738.95",
+              "details": {
+                "subtotal": "738.95",
+                "shipping": "0.00",
+                "handling_fee": "0.00",
+                "shipping_discount": "0.00",
+                "insurance": "0.00"
+              }
+            },
+            "payment_mode": "INSTANT_TRANSFER",
+            "state": "completed",
+            "protection_eligibility": "ELIGIBLE",
+            "protection_eligibility_type": "ITEM_NOT_RECEIVED_ELIGIBLE,UNAUTHORIZED_PAYMENT_ELIGIBLE",
+            "transaction_fee": {
+              "currency": "USD",
+              "value": "26.28"
+            },
+            "parent_payment": "PAYID-M2WKQXQ14R47235CR2758817",
+            "create_time": "2024-08-02T09:35:39Z",
+            "update_time": "2024-08-02T09:35:39Z",
+            "links": [
+              {
+                "href": "https://api.sandbox.paypal.com/v1/payments/sale/72677872SC138384V",
+                "rel": "self",
+                "method": "GET"
+              },
+              {
+                "href": "https://api.sandbox.paypal.com/v1/payments/sale/72677872SC138384V/refund",
+                "rel": "refund",
+                "method": "POST"
+              },
+              {
+                "href": "https://api.sandbox.paypal.com/v1/payments/payment/PAYID-M2WKQXQ14R47235CR2758817",
+                "rel": "parent_payment",
+                "method": "GET"
+              }
+            ]
+          }
+        }
+      ],
+      "amount": {
+        "currency": "USD",
+        "total": "738.95",
+        "details": {
+          "subtotal": "738.95",
+          "shipping": "0.00",
+          "handling_fee": "0.00",
+          "shipping_discount": "0.00",
+          "insurance": "0.00"
+        }
+      },
+      "payee": {
+        "email": "sb-vkj8131074225@business.example.com",
+        "merchant_id": "YUGBVHGSQHYDJ"
+      },
+      "description": "Payment description",
+      "item_list": {
+        "shipping_address": {
+          "recipient_name": "John Doe",
+          "line1": "1 Main St",
+          "city": "San Jose",
+          "country_code": "US",
+          "postal_code": "95131",
+          "state": "CA"
+        }
+      }
+    }
+  ],
+  "failed_transactions": [],
+  "state": "approved",
+  "create_time": "2024-08-02T09:35:26Z",
+  "update_time": "2024-08-02T09:35:39Z",
+  "links": [
+    {
+      "href": "https://api.sandbox.paypal.com/v1/payments/payment/PAYID-M2WKQXQ14R47235CR2758817",
+      "rel": "self",
+      "method": "GET"
+    }
+  ]
+}
+2024-08-02T16:35:40.323+07:00  INFO 9368 --- [CommonService] [http-nio-8009-exec-2] c.l.p.Controller.PaypalController        : Dữ liệu thanh toán: {"id":891419,"userId":2,"items":[{"productId":2,"name":"Sample Productf","price":100.0,"quantity":2,"weight":2,"warehouseIds":"1,2","primaryImageUrl":"/uploads/68c99844-0a28-4bf5-8a99-26ee36e76c6b-o.jpg"}],"selectedShipping":{"id":1,"name":"Ship Thường","pricePerKm":3.0,"pricePerKg":3.0},"distanceData":{"userId":0,"receiverName":"fff","provinceCity":"Tỉnh Bình Phước","district":"Huyện Hớn Quản","ward":"Xã Phước An","street":"hghghg","originLatitude":11.623699763447684,"originLongitude":106.63380893803875,"warehouseId":2,"warehouseName":"đasad","warehouseProvinceCity":"Tỉnh Bà Rịa - Vũng Tàu","warehouseDistrict":"Huyện Đất Đỏ","warehouseWard":"Xã Láng Dài","destinationLatitude":10.516610939030933,"destinationLongitude":107.34446195170287,"distance":175.65},"total":738.95}
+2024-08-02T16:35:40.333+07:00  INFO 9368 --- [CommonService] [kafka-producer-network-thread | producer-1] c.l.payment_service.Event.EventProducer  : Message sent to topic PaymentSuccess: {"id":891419,"userId":2,"items":[{"productId":2,"name":"Sample Productf","price":100.0,"quantity":2,"weight":2,"warehouseIds":"1,2","primaryImageUrl":"/uploads/68c99844-0a28-4bf5-8a99-26ee36e76c6b-o.jpg"}],"selectedShipping":{"id":1,"name":"Ship Thường","pricePerKm":3.0,"pricePerKg":3.0},"distanceData":{"userId":0,"receiverName":"fff","provinceCity":"Tỉnh Bình Phước","district":"Huyện Hớn Quản","ward":"Xã Phước An","street":"hghghg","originLatitude":11.623699763447684,"originLongitude":106.63380893803875,"warehouseId":2,"warehouseName":"đasad","warehouseProvinceCity":"Tỉnh Bà Rịa - Vũng Tàu","warehouseDistrict":"Huyện Đất Đỏ","warehouseWard":"Xã Láng Dài","destinationLatitude":10.516610939030933,"destinationLongitude":107.34446195170287,"distance":175.65},"total":738.95}
+2024-08-02T16:35:40.333+07:00  INFO 9368 --- [CommonService] [kafka-producer-network-thread | producer-1] c.l.p.Controller.PaypalController        : Sent payment data to Kafka: OK
+2024-08-02T16:35:40.405+07:00 ERROR 9368 --- [CommonService] [http-nio-8009-exec-8] c.l.C.advide.ExceptionAdvide             : Unknown internal server error: No static resource favicon.ico.
+2024-08-02T16:35:40.405+07:00 ERROR 9368 --- [CommonService] [http-nio-8009-exec-8] c.l.C.advide.ExceptionAdvide             : Exception class: class org.springframework.web.servlet.resource.NoResourceFoundException
+2024-08-02T16:35:40.405+07:00 ERROR 9368 --- [CommonService] [http-nio-8009-exec-8] c.l.C.advide.ExceptionAdvide             : Exception cause: null
+2024-08-02T16:40:37.681+07:00 ERROR 9368 --- [CommonService] [http-nio-8009-exec-5] c.l.C.advide.ExceptionAdvide             : Unknown internal server error: No static resource favicon.ico.
+2024-08-02T16:40:37.681+07:00 ERROR 9368 --- [CommonService] [http-nio-8009-exec-5] c.l.C.advide.ExceptionAdvide             : Exception class: class org.springframework.web.servlet.resource.NoResourceFoundException
+2024-08-02T16:40:37.681+07:00 ERROR 9368 --- [CommonService] [http-nio-8009-exec-5] c.l.C.advide.ExceptionAdvide             : Exception cause: null
+2024-08-02T16:40:41.019+07:00 ERROR 9368 --- [CommonService] [http-nio-8009-exec-6] com.paypal.base.HttpConnection           : Response code: 400	Error response: {"name":"PAYMENT_ALREADY_DONE","message":"Payment has been done already for this cart.","information_link":"https://developer.paypal.com/docs/api/payments/v1/#error-PAYMENT_ALREADY_DONE","debug_id":"a7fdde02ea4d5"}
+2024-08-02T16:40:41.049+07:00 ERROR 9368 --- [CommonService] [http-nio-8009-exec-6] c.l.p.Controller.PaypalController        : Error while executing PayPal payment: 
+
+com.paypal.base.rest.PayPalRESTException: Response code: 400	Error response: {"name":"PAYMENT_ALREADY_DONE","message":"Payment has been done already for this cart.","information_link":"https://developer.paypal.com/docs/api/payments/v1/#error-PAYMENT_ALREADY_DONE","debug_id":"a7fdde02ea4d5"}
+	at com.paypal.base.rest.PayPalRESTException.createFromHttpErrorException(PayPalRESTException.java:72) ~[rest-api-sdk-1.14.0.jar:na]
+	at com.paypal.base.rest.PayPalResource.execute(PayPalResource.java:431) ~[rest-api-sdk-1.14.0.jar:na]
+	at com.paypal.base.rest.PayPalResource.configureAndExecute(PayPalResource.java:295) ~[rest-api-sdk-1.14.0.jar:na]
+	at com.paypal.base.rest.PayPalResource.configureAndExecute(PayPalResource.java:228) ~[rest-api-sdk-1.14.0.jar:na]
+	at com.paypal.api.payments.Payment.execute(Payment.java:226) ~[rest-api-sdk-1.14.0.jar:na]
+	at com.linhmai.payment_service.Service.PaypalService.executePayment(PaypalService.java:53) ~[classes/:na]
+	at com.linhmai.payment_service.Controller.PaypalController.paymentSuccess(PaypalController.java:65) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.25.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.25.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+Caused by: com.paypal.base.exception.HttpErrorException: Response code: 400	Error response: {"name":"PAYMENT_ALREADY_DONE","message":"Payment has been done already for this cart.","information_link":"https://developer.paypal.com/docs/api/payments/v1/#error-PAYMENT_ALREADY_DONE","debug_id":"a7fdde02ea4d5"}
+	at com.paypal.base.HttpConnection.executeWithStream(HttpConnection.java:162) ~[rest-api-sdk-1.14.0.jar:na]
+	at com.paypal.base.HttpConnection.execute(HttpConnection.java:65) ~[rest-api-sdk-1.14.0.jar:na]
+	at com.paypal.base.rest.PayPalResource.execute(PayPalResource.java:417) ~[rest-api-sdk-1.14.0.jar:na]
+	... 55 common frames omitted
+Caused by: java.io.IOException: Server returned HTTP response code: 400 for URL: https://api.sandbox.paypal.com/v1/payments/payment/PAYID-M2WI2WA6LK16781EU929825B/execute
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:2048) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:2043) ~[na:na]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getChainedException(HttpURLConnection.java:2042) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1609) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1589) ~[na:na]
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:224) ~[na:na]
+	at com.paypal.base.HttpConnection.executeWithStream(HttpConnection.java:132) ~[rest-api-sdk-1.14.0.jar:na]
+	... 57 common frames omitted
+Caused by: java.io.IOException: Server returned HTTP response code: 400 for URL: https://api.sandbox.paypal.com/v1/payments/payment/PAYID-M2WI2WA6LK16781EU929825B/execute
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1997) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1589) ~[na:na]
+	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:529) ~[na:na]
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(HttpsURLConnectionImpl.java:308) ~[na:na]
+	at com.paypal.base.HttpConnection.executeWithStream(HttpConnection.java:117) ~[rest-api-sdk-1.14.0.jar:na]
+	... 57 common frames omitted
+
+2024-08-02T16:40:41.133+07:00  WARN 9368 --- [CommonService] [http-nio-8009-exec-6] c.l.p.Controller.PaypalController        : Thanh toán thất bại
+2024-08-02T16:40:41.277+07:00 ERROR 9368 --- [CommonService] [http-nio-8009-exec-7] c.l.C.advide.ExceptionAdvide             : Unknown internal server error: No static resource favicon.ico.
+2024-08-02T16:40:41.278+07:00 ERROR 9368 --- [CommonService] [http-nio-8009-exec-7] c.l.C.advide.ExceptionAdvide             : Exception class: class org.springframework.web.servlet.resource.NoResourceFoundException
+2024-08-02T16:40:41.278+07:00 ERROR 9368 --- [CommonService] [http-nio-8009-exec-7] c.l.C.advide.ExceptionAdvide             : Exception cause: null
+2024-08-02T16:47:40.914+07:00  INFO 9368 --- [CommonService] [http-nio-8009-exec-10] c.l.p.Controller.PaypalController        : Thanh toán thành công: {
+  "id": "PAYID-M2WKWNI2VX770556E093624A",
+  "intent": "sale",
+  "payer": {
+    "payment_method": "paypal",
+    "status": "VERIFIED",
+    "payer_info": {
+      "email": "15102002@personal.example.com",
+      "first_name": "John",
+      "last_name": "Doe",
+      "payer_id": "682LVCHCAMN9Q",
+      "country_code": "US",
+      "shipping_address": {
+        "recipient_name": "John Doe",
+        "line1": "1 Main St",
+        "city": "San Jose",
+        "country_code": "US",
+        "postal_code": "95131",
+        "state": "CA"
+      }
+    }
+  },
+  "cart": "18432622SP866391S",
+  "transactions": [
+    {
+      "related_resources": [
+        {
+          "sale": {
+            "id": "5PR79117DJ4318926",
+            "amount": {
+              "currency": "USD",
+              "total": "738.95",
+              "details": {
+                "subtotal": "738.95",
+                "shipping": "0.00",
+                "handling_fee": "0.00",
+                "shipping_discount": "0.00",
+                "insurance": "0.00"
+              }
+            },
+            "payment_mode": "INSTANT_TRANSFER",
+            "state": "completed",
+            "protection_eligibility": "ELIGIBLE",
+            "protection_eligibility_type": "ITEM_NOT_RECEIVED_ELIGIBLE,UNAUTHORIZED_PAYMENT_ELIGIBLE",
+            "transaction_fee": {
+              "currency": "USD",
+              "value": "26.28"
+            },
+            "parent_payment": "PAYID-M2WKWNI2VX770556E093624A",
+            "create_time": "2024-08-02T09:47:39Z",
+            "update_time": "2024-08-02T09:47:39Z",
+            "links": [
+              {
+                "href": "https://api.sandbox.paypal.com/v1/payments/sale/5PR79117DJ4318926",
+                "rel": "self",
+                "method": "GET"
+              },
+              {
+                "href": "https://api.sandbox.paypal.com/v1/payments/sale/5PR79117DJ4318926/refund",
+                "rel": "refund",
+                "method": "POST"
+              },
+              {
+                "href": "https://api.sandbox.paypal.com/v1/payments/payment/PAYID-M2WKWNI2VX770556E093624A",
+                "rel": "parent_payment",
+                "method": "GET"
+              }
+            ]
+          }
+        }
+      ],
+      "amount": {
+        "currency": "USD",
+        "total": "738.95",
+        "details": {
+          "subtotal": "738.95",
+          "shipping": "0.00",
+          "handling_fee": "0.00",
+          "shipping_discount": "0.00",
+          "insurance": "0.00"
+        }
+      },
+      "payee": {
+        "email": "sb-vkj8131074225@business.example.com",
+        "merchant_id": "YUGBVHGSQHYDJ"
+      },
+      "description": "Payment description",
+      "item_list": {
+        "shipping_address": {
+          "recipient_name": "John Doe",
+          "line1": "1 Main St",
+          "city": "San Jose",
+          "country_code": "US",
+          "postal_code": "95131",
+          "state": "CA"
+        }
+      }
+    }
+  ],
+  "failed_transactions": [],
+  "state": "approved",
+  "create_time": "2024-08-02T09:47:32Z",
+  "update_time": "2024-08-02T09:47:39Z",
+  "links": [
+    {
+      "href": "https://api.sandbox.paypal.com/v1/payments/payment/PAYID-M2WKWNI2VX770556E093624A",
+      "rel": "self",
+      "method": "GET"
+    }
+  ]
+}
+2024-08-02T16:47:40.915+07:00  INFO 9368 --- [CommonService] [http-nio-8009-exec-10] c.l.p.Controller.PaypalController        : Dữ liệu thanh toán: {"id":261591,"userId":2,"items":[{"productId":2,"name":"Sample Productf","price":100.0,"quantity":2,"weight":2,"warehouseIds":"1,2","primaryImageUrl":"/uploads/68c99844-0a28-4bf5-8a99-26ee36e76c6b-o.jpg"}],"selectedShipping":{"id":1,"name":"Ship Thường","pricePerKm":3.0,"pricePerKg":3.0},"distanceData":{"userId":0,"receiverName":"fff","provinceCity":"Tỉnh Bình Phước","district":"Huyện Hớn Quản","ward":"Xã Phước An","street":"hghghg","originLatitude":11.623699763447684,"originLongitude":106.63380893803875,"warehouseId":2,"warehouseName":"đasad","warehouseProvinceCity":"Tỉnh Bà Rịa - Vũng Tàu","warehouseDistrict":"Huyện Đất Đỏ","warehouseWard":"Xã Láng Dài","destinationLatitude":10.516610939030933,"destinationLongitude":107.34446195170287,"distance":175.65},"total":738.95}
+2024-08-02T16:47:40.929+07:00  INFO 9368 --- [CommonService] [kafka-producer-network-thread | producer-1] c.l.payment_service.Event.EventProducer  : Message sent to topic PaymentSuccess: {"id":261591,"userId":2,"items":[{"productId":2,"name":"Sample Productf","price":100.0,"quantity":2,"weight":2,"warehouseIds":"1,2","primaryImageUrl":"/uploads/68c99844-0a28-4bf5-8a99-26ee36e76c6b-o.jpg"}],"selectedShipping":{"id":1,"name":"Ship Thường","pricePerKm":3.0,"pricePerKg":3.0},"distanceData":{"userId":0,"receiverName":"fff","provinceCity":"Tỉnh Bình Phước","district":"Huyện Hớn Quản","ward":"Xã Phước An","street":"hghghg","originLatitude":11.623699763447684,"originLongitude":106.63380893803875,"warehouseId":2,"warehouseName":"đasad","warehouseProvinceCity":"Tỉnh Bà Rịa - Vũng Tàu","warehouseDistrict":"Huyện Đất Đỏ","warehouseWard":"Xã Láng Dài","destinationLatitude":10.516610939030933,"destinationLongitude":107.34446195170287,"distance":175.65},"total":738.95}
+2024-08-02T16:47:40.929+07:00  INFO 9368 --- [CommonService] [kafka-producer-network-thread | producer-1] c.l.p.Controller.PaypalController        : Sent payment data to Kafka: OK
+2024-08-02T16:47:40.977+07:00 ERROR 9368 --- [CommonService] [http-nio-8009-exec-1] c.l.C.advide.ExceptionAdvide             : Unknown internal server error: No static resource favicon.ico.
+2024-08-02T16:47:40.977+07:00 ERROR 9368 --- [CommonService] [http-nio-8009-exec-1] c.l.C.advide.ExceptionAdvide             : Exception class: class org.springframework.web.servlet.resource.NoResourceFoundException
+2024-08-02T16:47:40.977+07:00 ERROR 9368 --- [CommonService] [http-nio-8009-exec-1] c.l.C.advide.ExceptionAdvide             : Exception cause: null
+2024-08-02T17:02:45.563+07:00  INFO 9368 --- [CommonService] [SpringApplicationShutdownHook] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+2024-08-02T17:02:45.577+07:00  INFO 9368 --- [CommonService] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2024-08-02T17:02:45.577+07:00  INFO 9368 --- [CommonService] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-08-02T17:02:45.578+07:00  INFO 9368 --- [CommonService] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2024-08-02T17:02:45.579+07:00  INFO 9368 --- [CommonService] [SpringApplicationShutdownHook] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for producer-1 unregistered

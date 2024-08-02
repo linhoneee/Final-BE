@@ -44,10 +44,6 @@ public class CustomerCouponService {
                         discountedOrderValue -= discountAmount;
                     }
 
-                    // Ensure discountAmount does not exceed maxUsage
-                    if (discountAmount > coupon.getMaxUsage()) {
-                        discountAmount = coupon.getMaxUsage().doubleValue();
-                    }
 
                     coupon.setCurrentUsage(coupon.getCurrentUsage() + 1);
 

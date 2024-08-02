@@ -17,6 +17,12 @@
             <column name="items" type="TEXT">
                 <constraints nullable="false"/>
             </column>
+            <column name="selected_shipping" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="distance_data" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
             <column name="total" type="DECIMAL(10, 2)">
                 <constraints nullable="false"/>
             </column>

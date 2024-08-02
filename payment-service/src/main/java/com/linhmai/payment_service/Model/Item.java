@@ -24,4 +24,7 @@ public class Item {
 
     @NotNull
     private String warehouseIds;
+
+    private String primaryImageUrl;
+
 }

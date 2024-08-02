@@ -172,9 +172,6 @@ public class CartService {
         this.objectMapper = objectMapper;
     }
 
-    public Flux<Cart> findAll() {
-        return cartRepository.findAll();
-    }
 
     public Mono<Cart> findByUserId(Long userId) {
         return cartRepository.findByUserId(userId);
@@ -243,6 +240,32 @@ public class CartService {
                     items = items.stream()
                             .filter(existingItem -> !existingItem.getProductId().equals(item.getProductId()))
                             .collect(Collectors.toList());
+
+                    String updatedItemsJson = convertItemsToJson(items);
+                    cart.setItems(updatedItemsJson);
+                    cart.setTotal(calculateTotal(items));
+                    return cartRepository.save(cart);
+                })
+                .switchIfEmpty(Mono.error(new RuntimeException("Cart not found for user: " + userId)));
+    }
+    public Mono<Cart> removeItemOrUpdateQuantity(Long userId, Item item) {
+        return cartRepository.findByUserId(userId)
+                .flatMap(cart -> {
+                    List<Item> items = parseItems(cart.getItems());
+                    log.info("Current items in cart: {}", items);
+
+                    items = items.stream()
+                            .map(existingItem -> {
+                                if (existingItem.getProductId().equals(item.getProductId())) {
+                                    log.info("Found product with ID: {}", existingItem.getProductId());
+                                    existingItem.setQuantity(existingItem.getQuantity() - item.getQuantity());
+                                }
+                                return existingItem;
+                            })
+                            .filter(existingItem -> existingItem.getQuantity() > 0)
+                            .collect(Collectors.toList());
+
+                    log.info("Updated items in cart after removal: {}", items);
 
                     String updatedItemsJson = convertItemsToJson(items);
                     cart.setItems(updatedItemsJson);
