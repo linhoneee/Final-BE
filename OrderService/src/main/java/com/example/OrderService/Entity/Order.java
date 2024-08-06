@@ -22,7 +22,7 @@ public class Order {
     private int userId;
 
     @Column("items")
-    private String items;
+    private String items; // Giữ kiểu dữ liệu của items là String
 
     @Column("selected_shipping")
     private String selectedShipping;

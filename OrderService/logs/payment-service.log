@@ -1,86 +1,30 @@
-2024-08-03T11:13:39.921+07:00  INFO 33912 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Starting PaymentServiceApplication using Java 17.0.7 with PID 33912 (C:\CODE\FINAL MAIN\test2\payment-service\target\classes started by ASUS in C:\CODE\FINAL MAIN\test2\OrderService)
-2024-08-03T11:13:39.932+07:00 DEBUG 33912 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Running with Spring Boot v3.2.7-SNAPSHOT, Spring v6.1.10
-2024-08-03T11:13:39.935+07:00  INFO 33912 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : No active profile set, falling back to 1 default profile: "default"
-2024-08-03T11:13:41.702+07:00  INFO 33912 --- [CommonService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8009 (http)
-2024-08-03T11:13:41.717+07:00  INFO 33912 --- [CommonService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-08-03T11:13:41.717+07:00  INFO 33912 --- [CommonService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-08-03T11:13:41.802+07:00  INFO 33912 --- [CommonService] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-08-03T11:13:41.802+07:00  INFO 33912 --- [CommonService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1784 ms
-2024-08-03T11:13:42.569+07:00  WARN 33912 --- [CommonService] [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
-2024-08-03T11:13:42.849+07:00  INFO 33912 --- [CommonService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8009 (http) with context path ''
-2024-08-03T11:13:42.862+07:00  INFO 33912 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Started PaymentServiceApplication in 3.778 seconds (process running for 5.415)
-2024-08-03T11:14:05.308+07:00  INFO 11648 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Starting PaymentServiceApplication using Java 17.0.7 with PID 11648 (C:\CODE\FINAL MAIN\test2\payment-service\target\classes started by ASUS in C:\CODE\FINAL MAIN\test2\OrderService)
-2024-08-03T11:14:05.312+07:00 DEBUG 11648 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Running with Spring Boot v3.2.7-SNAPSHOT, Spring v6.1.10
-2024-08-03T11:14:05.314+07:00  INFO 11648 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : No active profile set, falling back to 1 default profile: "default"
-2024-08-03T11:14:07.790+07:00  INFO 11648 --- [CommonService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8009 (http)
-2024-08-03T11:14:07.820+07:00  INFO 11648 --- [CommonService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-08-03T11:14:07.822+07:00  INFO 11648 --- [CommonService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-08-03T11:14:07.915+07:00  INFO 11648 --- [CommonService] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-08-03T11:14:07.916+07:00  INFO 11648 --- [CommonService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2505 ms
-2024-08-03T11:14:08.891+07:00  WARN 11648 --- [CommonService] [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
-2024-08-03T11:14:09.300+07:00  INFO 11648 --- [CommonService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8009 (http) with context path ''
-2024-08-03T11:14:09.314+07:00  INFO 11648 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Started PaymentServiceApplication in 5.518 seconds (process running for 6.554)
-2024-08-03T11:15:50.279+07:00  INFO 27540 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Starting PaymentServiceApplication using Java 17.0.7 with PID 27540 (C:\CODE\FINAL MAIN\test2\payment-service\target\classes started by ASUS in C:\CODE\FINAL MAIN\test2\OrderService)
-2024-08-03T11:15:50.281+07:00 DEBUG 27540 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Running with Spring Boot v3.2.7-SNAPSHOT, Spring v6.1.10
-2024-08-03T11:15:50.281+07:00  INFO 27540 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : No active profile set, falling back to 1 default profile: "default"
-2024-08-03T11:15:51.411+07:00  INFO 27540 --- [CommonService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8009 (http)
-2024-08-03T11:15:51.421+07:00  INFO 27540 --- [CommonService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-08-03T11:15:51.421+07:00  INFO 27540 --- [CommonService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-08-03T11:15:51.474+07:00  INFO 27540 --- [CommonService] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-08-03T11:15:51.474+07:00  INFO 27540 --- [CommonService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1134 ms
-2024-08-03T11:15:51.946+07:00  WARN 27540 --- [CommonService] [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
-2024-08-03T11:15:52.153+07:00  INFO 27540 --- [CommonService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8009 (http) with context path ''
-2024-08-03T11:15:52.162+07:00  INFO 27540 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Started PaymentServiceApplication in 2.451 seconds (process running for 3.046)
-2024-08-03T11:19:03.168+07:00  INFO 27540 --- [CommonService] [http-nio-8009-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-08-03T11:19:03.169+07:00  INFO 27540 --- [CommonService] [http-nio-8009-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-08-03T11:19:03.169+07:00  INFO 27540 --- [CommonService] [http-nio-8009-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2024-08-03T11:21:23.395+07:00  INFO 29304 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Starting PaymentServiceApplication using Java 17.0.7 with PID 29304 (C:\CODE\FINAL MAIN\test2\payment-service\target\classes started by ASUS in C:\CODE\FINAL MAIN\test2\OrderService)
-2024-08-03T11:21:23.397+07:00 DEBUG 29304 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Running with Spring Boot v3.2.7-SNAPSHOT, Spring v6.1.10
-2024-08-03T11:21:23.398+07:00  INFO 29304 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : No active profile set, falling back to 1 default profile: "default"
-2024-08-03T11:21:24.539+07:00  INFO 29304 --- [CommonService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8009 (http)
-2024-08-03T11:21:24.551+07:00  INFO 29304 --- [CommonService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-08-03T11:21:24.552+07:00  INFO 29304 --- [CommonService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-08-03T11:21:24.614+07:00  INFO 29304 --- [CommonService] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-08-03T11:21:24.615+07:00  INFO 29304 --- [CommonService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1164 ms
-2024-08-03T11:21:25.150+07:00  WARN 29304 --- [CommonService] [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
-2024-08-03T11:21:25.457+07:00  INFO 29304 --- [CommonService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8009 (http) with context path ''
-2024-08-03T11:21:25.469+07:00  INFO 29304 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Started PaymentServiceApplication in 2.662 seconds (process running for 3.262)
-2024-08-03T11:21:32.399+07:00  INFO 29304 --- [CommonService] [http-nio-8009-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-08-03T11:21:32.406+07:00  INFO 29304 --- [CommonService] [http-nio-8009-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-08-03T11:21:32.406+07:00  INFO 29304 --- [CommonService] [http-nio-8009-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2024-08-03T11:23:07.653+07:00  INFO 28608 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Starting PaymentServiceApplication using Java 17.0.7 with PID 28608 (C:\CODE\FINAL MAIN\test2\payment-service\target\classes started by ASUS in C:\CODE\FINAL MAIN\test2\OrderService)
-2024-08-03T11:23:07.656+07:00 DEBUG 28608 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Running with Spring Boot v3.2.7-SNAPSHOT, Spring v6.1.10
-2024-08-03T11:23:07.657+07:00  INFO 28608 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : No active profile set, falling back to 1 default profile: "default"
-2024-08-03T11:23:09.397+07:00  INFO 28608 --- [CommonService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8009 (http)
-2024-08-03T11:23:09.420+07:00  INFO 28608 --- [CommonService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-08-03T11:23:09.420+07:00  INFO 28608 --- [CommonService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-08-03T11:23:09.527+07:00  INFO 28608 --- [CommonService] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-08-03T11:23:09.531+07:00  INFO 28608 --- [CommonService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1808 ms
-2024-08-03T11:23:10.418+07:00  WARN 28608 --- [CommonService] [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
-2024-08-03T11:23:10.707+07:00  INFO 28608 --- [CommonService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8009 (http) with context path ''
-2024-08-03T11:23:10.718+07:00  INFO 28608 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Started PaymentServiceApplication in 3.87 seconds (process running for 4.632)
-2024-08-03T11:23:47.800+07:00  INFO 28608 --- [CommonService] [http-nio-8009-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-08-03T11:23:47.800+07:00  INFO 28608 --- [CommonService] [http-nio-8009-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-08-03T11:23:47.801+07:00  INFO 28608 --- [CommonService] [http-nio-8009-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-08-03T11:23:47.831+07:00 ERROR 28608 --- [CommonService] [http-nio-8009-exec-1] c.l.C.advide.ExceptionAdvide             : Unknown internal server error: No static resource paypal.
-2024-08-03T11:23:47.831+07:00 ERROR 28608 --- [CommonService] [http-nio-8009-exec-1] c.l.C.advide.ExceptionAdvide             : Exception class: class org.springframework.web.servlet.resource.NoResourceFoundException
-2024-08-03T11:23:47.831+07:00 ERROR 28608 --- [CommonService] [http-nio-8009-exec-1] c.l.C.advide.ExceptionAdvide             : Exception cause: null
-2024-08-03T11:25:24.160+07:00  INFO 37992 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Starting PaymentServiceApplication using Java 17.0.7 with PID 37992 (C:\CODE\FINAL MAIN\test2\payment-service\target\classes started by ASUS in C:\CODE\FINAL MAIN\test2\OrderService)
-2024-08-03T11:25:24.162+07:00 DEBUG 37992 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Running with Spring Boot v3.2.7-SNAPSHOT, Spring v6.1.10
-2024-08-03T11:25:24.163+07:00  INFO 37992 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : No active profile set, falling back to 1 default profile: "default"
-2024-08-03T11:25:25.782+07:00  INFO 37992 --- [CommonService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8009 (http)
-2024-08-03T11:25:25.803+07:00  INFO 37992 --- [CommonService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-08-03T11:25:25.803+07:00  INFO 37992 --- [CommonService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-08-03T11:25:25.889+07:00  INFO 37992 --- [CommonService] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-08-03T11:25:25.890+07:00  INFO 37992 --- [CommonService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1680 ms
-2024-08-03T11:25:26.858+07:00  WARN 37992 --- [CommonService] [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
-2024-08-03T11:25:27.259+07:00  INFO 37992 --- [CommonService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8009 (http) with context path ''
-2024-08-03T11:25:27.273+07:00  INFO 37992 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Started PaymentServiceApplication in 3.78 seconds (process running for 4.507)
-2024-08-03T11:25:38.172+07:00  INFO 37992 --- [CommonService] [http-nio-8009-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-08-03T11:25:38.172+07:00  INFO 37992 --- [CommonService] [http-nio-8009-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-08-03T11:25:38.173+07:00  INFO 37992 --- [CommonService] [http-nio-8009-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-08-03T11:26:09.394+07:00  INFO 37992 --- [CommonService] [http-nio-8009-exec-3] c.l.p.Controller.PaypalController        : Thanh toán thành công: {
-  "id": "PAYID-M2W3CRA46R88326P5598125K",
+2024-08-06T18:38:16.568+07:00  INFO 21492 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Starting PaymentServiceApplication using Java 17.0.7 with PID 21492 (C:\CODE\FINAL MAIN\test2\payment-service\target\classes started by ASUS in C:\CODE\FINAL MAIN\test2\OrderService)
+2024-08-06T18:38:16.576+07:00 DEBUG 21492 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Running with Spring Boot v3.2.7-SNAPSHOT, Spring v6.1.10
+2024-08-06T18:38:16.580+07:00  INFO 21492 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : No active profile set, falling back to 1 default profile: "default"
+2024-08-06T18:38:18.233+07:00  INFO 21492 --- [CommonService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8009 (http)
+2024-08-06T18:38:18.250+07:00  INFO 21492 --- [CommonService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-06T18:38:18.250+07:00  INFO 21492 --- [CommonService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-08-06T18:38:18.339+07:00  INFO 21492 --- [CommonService] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-06T18:38:18.339+07:00  INFO 21492 --- [CommonService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1686 ms
+2024-08-06T18:38:19.211+07:00  WARN 21492 --- [CommonService] [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-08-06T18:38:19.593+07:00  INFO 21492 --- [CommonService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8009 (http) with context path ''
+2024-08-06T18:38:19.605+07:00  INFO 21492 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Started PaymentServiceApplication in 3.835 seconds (process running for 7.685)
+2024-08-06T18:41:22.774+07:00  INFO 18812 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Starting PaymentServiceApplication using Java 17.0.7 with PID 18812 (C:\CODE\FINAL MAIN\test2\payment-service\target\classes started by ASUS in C:\CODE\FINAL MAIN\test2\OrderService)
+2024-08-06T18:41:22.778+07:00 DEBUG 18812 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Running with Spring Boot v3.2.7-SNAPSHOT, Spring v6.1.10
+2024-08-06T18:41:22.779+07:00  INFO 18812 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : No active profile set, falling back to 1 default profile: "default"
+2024-08-06T18:41:24.029+07:00  INFO 18812 --- [CommonService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8009 (http)
+2024-08-06T18:41:24.041+07:00  INFO 18812 --- [CommonService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-06T18:41:24.042+07:00  INFO 18812 --- [CommonService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-08-06T18:41:24.109+07:00  INFO 18812 --- [CommonService] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-06T18:41:24.110+07:00  INFO 18812 --- [CommonService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1270 ms
+2024-08-06T18:41:24.682+07:00  WARN 18812 --- [CommonService] [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-08-06T18:41:24.930+07:00  INFO 18812 --- [CommonService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8009 (http) with context path ''
+2024-08-06T18:41:24.939+07:00  INFO 18812 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Started PaymentServiceApplication in 2.905 seconds (process running for 3.799)
+2024-08-06T18:44:56.824+07:00  INFO 18812 --- [CommonService] [http-nio-8009-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-06T18:44:56.824+07:00  INFO 18812 --- [CommonService] [http-nio-8009-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-06T18:44:56.825+07:00  INFO 18812 --- [CommonService] [http-nio-8009-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-08-06T18:46:11.492+07:00  INFO 18812 --- [CommonService] [http-nio-8009-exec-4] c.l.p.Controller.PaypalController        : Thanh toán thành công: {
+  "id": "PAYID-M2ZAZPA1L814685DN6399220",
   "intent": "sale",
   "payer": {
     "payment_method": "paypal",
@@ -101,18 +45,18 @@
       }
     }
   },
-  "cart": "1L345368741170601",
+  "cart": "7V419809TH4642630",
   "transactions": [
     {
       "related_resources": [
         {
           "sale": {
-            "id": "9DC71175XE710051R",
+            "id": "4M630645627405207",
             "amount": {
               "currency": "USD",
-              "total": "982.18",
+              "total": "4737.86",
               "details": {
-                "subtotal": "982.18",
+                "subtotal": "4737.86",
                 "shipping": "0.00",
                 "handling_fee": "0.00",
                 "shipping_discount": "0.00",
@@ -125,24 +69,24 @@
             "protection_eligibility_type": "ITEM_NOT_RECEIVED_ELIGIBLE,UNAUTHORIZED_PAYMENT_ELIGIBLE",
             "transaction_fee": {
               "currency": "USD",
-              "value": "34.77"
+              "value": "165.84"
             },
-            "parent_payment": "PAYID-M2W3CRA46R88326P5598125K",
-            "create_time": "2024-08-03T04:26:08Z",
-            "update_time": "2024-08-03T04:26:08Z",
+            "parent_payment": "PAYID-M2ZAZPA1L814685DN6399220",
+            "create_time": "2024-08-06T11:46:11Z",
+            "update_time": "2024-08-06T11:46:11Z",
             "links": [
               {
-                "href": "https://api.sandbox.paypal.com/v1/payments/sale/9DC71175XE710051R",
+                "href": "https://api.sandbox.paypal.com/v1/payments/sale/4M630645627405207",
                 "rel": "self",
                 "method": "GET"
               },
               {
-                "href": "https://api.sandbox.paypal.com/v1/payments/sale/9DC71175XE710051R/refund",
+                "href": "https://api.sandbox.paypal.com/v1/payments/sale/4M630645627405207/refund",
                 "rel": "refund",
                 "method": "POST"
               },
               {
-                "href": "https://api.sandbox.paypal.com/v1/payments/payment/PAYID-M2W3CRA46R88326P5598125K",
+                "href": "https://api.sandbox.paypal.com/v1/payments/payment/PAYID-M2ZAZPA1L814685DN6399220",
                 "rel": "parent_payment",
                 "method": "GET"
               }
@@ -152,9 +96,9 @@
       ],
       "amount": {
         "currency": "USD",
-        "total": "982.18",
+        "total": "4737.86",
         "details": {
-          "subtotal": "982.18",
+          "subtotal": "4737.86",
           "shipping": "0.00",
           "handling_fee": "0.00",
           "shipping_discount": "0.00",
@@ -180,17 +124,18 @@
   ],
   "failed_transactions": [],
   "state": "approved",
-  "create_time": "2024-08-03T04:25:40Z",
-  "update_time": "2024-08-03T04:26:08Z",
+  "create_time": "2024-08-06T11:45:00Z",
+  "update_time": "2024-08-06T11:46:11Z",
   "links": [
     {
-      "href": "https://api.sandbox.paypal.com/v1/payments/payment/PAYID-M2W3CRA46R88326P5598125K",
+      "href": "https://api.sandbox.paypal.com/v1/payments/payment/PAYID-M2ZAZPA1L814685DN6399220",
       "rel": "self",
       "method": "GET"
     }
   ]
 }
-2024-08-03T11:26:09.464+07:00  INFO 37992 --- [CommonService] [http-nio-8009-exec-3] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+2024-08-06T18:46:11.497+07:00  INFO 18812 --- [CommonService] [http-nio-8009-exec-4] c.l.p.Controller.PaypalController        : Dữ liệu thanh toán: {"id":496686,"userId":1,"items":[{"productId":4,"name":"ewqrefwq","price":22.0,"quantity":2,"weight":777,"warehouseIds":"1,2,3","primaryImageUrl":"/uploads/1a667bc7-11aa-4867-9cb8-4746a65587c6-Screenshot 2024-07-12 135940.png"}],"selectedShipping":{"id":1,"name":"Ship Thường","pricePerKm":3.0,"pricePerKg":3.0},"distanceData":{"userId":0,"receiverName":"àdsafdsaf","provinceCity":"Thành phố Đà Nẵng","district":"Quận Hải Châu","ward":"Phường Hải Châu II","street":"dsafdsfa","originLatitude":16.0664448,"originLongitude":108.2163913,"warehouseId":1,"warehouseName":"linh","warehouseProvinceCity":"Thành phố Đà Nẵng","warehouseDistrict":"Quận Ngũ Hành Sơn","warehouseWard":"Phường Hoà Hải","destinationLatitude":15.9962329,"destinationLongitude":108.2642553,"distance":10.62},"total":4737.86}
+2024-08-06T18:46:11.555+07:00  INFO 18812 --- [CommonService] [http-nio-8009-exec-4] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
 	acks = -1
 	auto.include.jmx.reporter = true
 	batch.size = 16384
@@ -280,59 +225,23 @@
 	transactional.id = null
 	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
 
-2024-08-03T11:26:09.505+07:00  INFO 37992 --- [CommonService] [http-nio-8009-exec-3] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
-2024-08-03T11:26:09.575+07:00  INFO 37992 --- [CommonService] [http-nio-8009-exec-3] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.2
-2024-08-03T11:26:09.575+07:00  INFO 37992 --- [CommonService] [http-nio-8009-exec-3] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c4deed513057c94e
-2024-08-03T11:26:09.575+07:00  INFO 37992 --- [CommonService] [http-nio-8009-exec-3] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1722659169573
-2024-08-03T11:26:10.205+07:00  INFO 37992 --- [CommonService] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: viDAuDrvQM-vsXuoC_W1_Q
-2024-08-03T11:26:10.207+07:00  INFO 37992 --- [CommonService] [kafka-producer-network-thread | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 39000 with epoch 0
-2024-08-03T11:26:10.273+07:00  INFO 37992 --- [CommonService] [kafka-producer-network-thread | producer-1] c.l.payment_service.Event.EventProducer  : Message sent to topic PaymentSuccess: {"id":"PAYID-M2W3CRA46R88326P5598125K","intent":"sale","payer":{"paymentMethod":"paypal","status":"VERIFIED","payerInfo":{"email":"15102002@personal.example.com","firstName":"John","lastName":"Doe","payerId":"682LVCHCAMN9Q","countryCode":"US","shippingAddress":{"recipientName":"John Doe","line1":"1 Main St","city":"San Jose","countryCode":"US","postalCode":"95131","state":"CA"}}},"cart":"1L345368741170601","transactions":[{"relatedResources":[{"sale":{"id":"9DC71175XE710051R","amount":{"currency":"USD","total":"982.18","details":{"subtotal":"982.18","shipping":"0.00","handlingFee":"0.00","shippingDiscount":"0.00","insurance":"0.00"}},"paymentMode":"INSTANT_TRANSFER","state":"completed","protectionEligibility":"ELIGIBLE","protectionEligibilityType":"ITEM_NOT_RECEIVED_ELIGIBLE,UNAUTHORIZED_PAYMENT_ELIGIBLE","transactionFee":{"currency":"USD","value":"34.77"},"parentPayment":"PAYID-M2W3CRA46R88326P5598125K","createTime":"2024-08-03T04:26:08Z","updateTime":"2024-08-03T04:26:08Z","links":[{"href":"https://api.sandbox.paypal.com/v1/payments/sale/9DC71175XE710051R","rel":"self","method":"GET"},{"href":"https://api.sandbox.paypal.com/v1/payments/sale/9DC71175XE710051R/refund","rel":"refund","method":"POST"},{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAYID-M2W3CRA46R88326P5598125K","rel":"parent_payment","method":"GET"}]}}],"amount":{"currency":"USD","total":"982.18","details":{"subtotal":"982.18","shipping":"0.00","handlingFee":"0.00","shippingDiscount":"0.00","insurance":"0.00"}},"payee":{"email":"sb-vkj8131074225@business.example.com","merchantId":"YUGBVHGSQHYDJ"},"description":"Payment description","itemList":{"shippingAddress":{"recipientName":"John Doe","line1":"1 Main St","city":"San Jose","countryCode":"US","postalCode":"95131","state":"CA"}}}],"failedTransactions":[],"state":"approved","createTime":"2024-08-03T04:25:40Z","updateTime":"2024-08-03T04:26:08Z","links":[{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAYID-M2W3CRA46R88326P5598125K","rel":"self","method":"GET"}]}
-2024-08-03T11:26:10.274+07:00  INFO 37992 --- [CommonService] [kafka-producer-network-thread | producer-1] c.l.p.Controller.PaypalController        : Sent payment data to Kafka: OK
-2024-08-03T11:26:10.494+07:00 ERROR 37992 --- [CommonService] [http-nio-8009-exec-4] c.l.C.advide.ExceptionAdvide             : Unknown internal server error: No static resource payment/details.
-2024-08-03T11:26:10.495+07:00 ERROR 37992 --- [CommonService] [http-nio-8009-exec-4] c.l.C.advide.ExceptionAdvide             : Exception class: class org.springframework.web.servlet.resource.NoResourceFoundException
-2024-08-03T11:26:10.495+07:00 ERROR 37992 --- [CommonService] [http-nio-8009-exec-4] c.l.C.advide.ExceptionAdvide             : Exception cause: null
-2024-08-03T11:26:10.535+07:00 ERROR 37992 --- [CommonService] [http-nio-8009-exec-5] c.l.C.advide.ExceptionAdvide             : Unknown internal server error: No static resource payment/details.
-2024-08-03T11:26:10.536+07:00 ERROR 37992 --- [CommonService] [http-nio-8009-exec-5] c.l.C.advide.ExceptionAdvide             : Exception class: class org.springframework.web.servlet.resource.NoResourceFoundException
-2024-08-03T11:26:10.536+07:00 ERROR 37992 --- [CommonService] [http-nio-8009-exec-5] c.l.C.advide.ExceptionAdvide             : Exception cause: null
-2024-08-03T11:35:10.252+07:00  INFO 37992 --- [CommonService] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
-2024-08-03T11:36:58.056+07:00  INFO 37992 --- [CommonService] [SpringApplicationShutdownHook] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
-2024-08-03T11:36:58.072+07:00  INFO 37992 --- [CommonService] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
-2024-08-03T11:36:58.073+07:00  INFO 37992 --- [CommonService] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
-2024-08-03T11:36:58.073+07:00  INFO 37992 --- [CommonService] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
-2024-08-03T11:36:58.073+07:00  INFO 37992 --- [CommonService] [SpringApplicationShutdownHook] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for producer-1 unregistered
-2024-08-03T11:37:06.104+07:00  INFO 3492 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Starting PaymentServiceApplication using Java 17.0.7 with PID 3492 (C:\CODE\FINAL MAIN\test2\payment-service\target\classes started by ASUS in C:\CODE\FINAL MAIN\test2\OrderService)
-2024-08-03T11:37:06.107+07:00 DEBUG 3492 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Running with Spring Boot v3.2.7-SNAPSHOT, Spring v6.1.10
-2024-08-03T11:37:06.107+07:00  INFO 3492 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : No active profile set, falling back to 1 default profile: "default"
-2024-08-03T11:37:07.455+07:00  INFO 3492 --- [CommonService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8009 (http)
-2024-08-03T11:37:07.471+07:00  INFO 3492 --- [CommonService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-08-03T11:37:07.471+07:00  INFO 3492 --- [CommonService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-08-03T11:37:07.548+07:00  INFO 3492 --- [CommonService] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-08-03T11:37:07.548+07:00  INFO 3492 --- [CommonService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1388 ms
-2024-08-03T11:37:08.103+07:00  WARN 3492 --- [CommonService] [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
-2024-08-03T11:37:08.300+07:00  INFO 3492 --- [CommonService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8009 (http) with context path ''
-2024-08-03T11:37:08.313+07:00  INFO 3492 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Started PaymentServiceApplication in 2.855 seconds (process running for 3.649)
-2024-08-03T11:38:00.908+07:00  INFO 3492 --- [CommonService] [http-nio-8009-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-08-03T11:38:00.908+07:00  INFO 3492 --- [CommonService] [http-nio-8009-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-08-03T11:38:00.908+07:00  INFO 3492 --- [CommonService] [http-nio-8009-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2024-08-03T11:38:00.940+07:00 ERROR 3492 --- [CommonService] [http-nio-8009-exec-1] c.l.C.advide.ExceptionAdvide             : Unknown internal server error: No static resource paypal.
-2024-08-03T11:38:00.940+07:00 ERROR 3492 --- [CommonService] [http-nio-8009-exec-1] c.l.C.advide.ExceptionAdvide             : Exception class: class org.springframework.web.servlet.resource.NoResourceFoundException
-2024-08-03T11:38:00.940+07:00 ERROR 3492 --- [CommonService] [http-nio-8009-exec-1] c.l.C.advide.ExceptionAdvide             : Exception cause: null
-2024-08-03T11:38:46.405+07:00  INFO 13824 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Starting PaymentServiceApplication using Java 17.0.7 with PID 13824 (C:\CODE\FINAL MAIN\test2\payment-service\target\classes started by ASUS in C:\CODE\FINAL MAIN\test2\OrderService)
-2024-08-03T11:38:46.409+07:00 DEBUG 13824 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Running with Spring Boot v3.2.7-SNAPSHOT, Spring v6.1.10
-2024-08-03T11:38:46.410+07:00  INFO 13824 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : No active profile set, falling back to 1 default profile: "default"
-2024-08-03T11:38:47.634+07:00  INFO 13824 --- [CommonService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8009 (http)
-2024-08-03T11:38:47.645+07:00  INFO 13824 --- [CommonService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-08-03T11:38:47.645+07:00  INFO 13824 --- [CommonService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-08-03T11:38:47.706+07:00  INFO 13824 --- [CommonService] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-08-03T11:38:47.706+07:00  INFO 13824 --- [CommonService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1236 ms
-2024-08-03T11:38:48.278+07:00  WARN 13824 --- [CommonService] [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
-2024-08-03T11:38:48.471+07:00  INFO 13824 --- [CommonService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8009 (http) with context path ''
-2024-08-03T11:38:48.486+07:00  INFO 13824 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Started PaymentServiceApplication in 2.785 seconds (process running for 3.517)
-2024-08-03T11:38:56.423+07:00  INFO 13824 --- [CommonService] [http-nio-8009-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-08-03T11:38:56.424+07:00  INFO 13824 --- [CommonService] [http-nio-8009-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-08-03T11:38:56.425+07:00  INFO 13824 --- [CommonService] [http-nio-8009-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-08-03T11:39:12.152+07:00  INFO 13824 --- [CommonService] [http-nio-8009-exec-2] c.l.p.Controller.PaypalController        : Thanh toán thành công: {
-  "id": "PAYID-M2W3IZQ6FP60165R5225543K",
+2024-08-06T18:46:11.591+07:00  INFO 18812 --- [CommonService] [http-nio-8009-exec-4] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2024-08-06T18:46:11.656+07:00  INFO 18812 --- [CommonService] [http-nio-8009-exec-4] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.2
+2024-08-06T18:46:11.657+07:00  INFO 18812 --- [CommonService] [http-nio-8009-exec-4] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c4deed513057c94e
+2024-08-06T18:46:11.657+07:00  INFO 18812 --- [CommonService] [http-nio-8009-exec-4] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1722944771654
+2024-08-06T18:46:12.316+07:00  INFO 18812 --- [CommonService] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: viDAuDrvQM-vsXuoC_W1_Q
+2024-08-06T18:46:12.317+07:00  INFO 18812 --- [CommonService] [kafka-producer-network-thread | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 42000 with epoch 0
+2024-08-06T18:46:12.376+07:00  INFO 18812 --- [CommonService] [kafka-producer-network-thread | producer-1] c.l.payment_service.Event.EventProducer  : Message sent to topic PaymentSuccess: {"id":496686,"userId":1,"items":[{"productId":4,"name":"ewqrefwq","price":22.0,"quantity":2,"weight":777,"warehouseIds":"1,2,3","primaryImageUrl":"/uploads/1a667bc7-11aa-4867-9cb8-4746a65587c6-Screenshot 2024-07-12 135940.png"}],"selectedShipping":{"id":1,"name":"Ship Thường","pricePerKm":3.0,"pricePerKg":3.0},"distanceData":{"userId":0,"receiverName":"àdsafdsaf","provinceCity":"Thành phố Đà Nẵng","district":"Quận Hải Châu","ward":"Phường Hải Châu II","street":"dsafdsfa","originLatitude":16.0664448,"originLongitude":108.2163913,"warehouseId":1,"warehouseName":"linh","warehouseProvinceCity":"Thành phố Đà Nẵng","warehouseDistrict":"Quận Ngũ Hành Sơn","warehouseWard":"Phường Hoà Hải","destinationLatitude":15.9962329,"destinationLongitude":108.2642553,"distance":10.62},"total":4737.86}
+2024-08-06T18:46:12.376+07:00  INFO 18812 --- [CommonService] [kafka-producer-network-thread | producer-1] c.l.p.Controller.PaypalController        : Sent payment data to Kafka: OK
+2024-08-06T18:46:12.632+07:00 ERROR 18812 --- [CommonService] [http-nio-8009-exec-5] c.l.C.advide.ExceptionAdvide             : Unknown internal server error: Required request parameter 'PayerID' for method parameter type String is not present
+2024-08-06T18:46:12.633+07:00 ERROR 18812 --- [CommonService] [http-nio-8009-exec-5] c.l.C.advide.ExceptionAdvide             : Exception class: class org.springframework.web.bind.MissingServletRequestParameterException
+2024-08-06T18:46:12.633+07:00 ERROR 18812 --- [CommonService] [http-nio-8009-exec-5] c.l.C.advide.ExceptionAdvide             : Exception cause: null
+2024-08-06T18:46:12.668+07:00 ERROR 18812 --- [CommonService] [http-nio-8009-exec-7] c.l.C.advide.ExceptionAdvide             : Unknown internal server error: Required request parameter 'PayerID' for method parameter type String is not present
+2024-08-06T18:46:12.668+07:00 ERROR 18812 --- [CommonService] [http-nio-8009-exec-7] c.l.C.advide.ExceptionAdvide             : Exception class: class org.springframework.web.bind.MissingServletRequestParameterException
+2024-08-06T18:46:12.668+07:00 ERROR 18812 --- [CommonService] [http-nio-8009-exec-7] c.l.C.advide.ExceptionAdvide             : Exception cause: null
+2024-08-06T18:55:12.361+07:00  INFO 18812 --- [CommonService] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2024-08-06T19:12:10.183+07:00  INFO 18812 --- [CommonService] [http-nio-8009-exec-9] c.l.p.Controller.PaypalController        : Thanh toán thành công: {
+  "id": "PAYID-M2ZBGAY20705093FT733223H",
   "intent": "sale",
   "payer": {
     "payment_method": "paypal",
@@ -353,18 +262,18 @@
       }
     }
   },
-  "cart": "436067296Y514921T",
+  "cart": "8A178045KB637344Y",
   "transactions": [
     {
       "related_resources": [
         {
           "sale": {
-            "id": "9CB181258J088225Y",
+            "id": "0U980718RG113823E",
             "amount": {
               "currency": "USD",
-              "total": "982.18",
+              "total": "1784.86",
               "details": {
-                "subtotal": "982.18",
+                "subtotal": "1784.86",
                 "shipping": "0.00",
                 "handling_fee": "0.00",
                 "shipping_discount": "0.00",
@@ -377,24 +286,24 @@
             "protection_eligibility_type": "ITEM_NOT_RECEIVED_ELIGIBLE,UNAUTHORIZED_PAYMENT_ELIGIBLE",
             "transaction_fee": {
               "currency": "USD",
-              "value": "34.77"
+              "value": "62.78"
             },
-            "parent_payment": "PAYID-M2W3IZQ6FP60165R5225543K",
-            "create_time": "2024-08-03T04:39:11Z",
-            "update_time": "2024-08-03T04:39:11Z",
+            "parent_payment": "PAYID-M2ZBGAY20705093FT733223H",
+            "create_time": "2024-08-06T12:12:09Z",
+            "update_time": "2024-08-06T12:12:09Z",
             "links": [
               {
-                "href": "https://api.sandbox.paypal.com/v1/payments/sale/9CB181258J088225Y",
+                "href": "https://api.sandbox.paypal.com/v1/payments/sale/0U980718RG113823E",
                 "rel": "self",
                 "method": "GET"
               },
               {
-                "href": "https://api.sandbox.paypal.com/v1/payments/sale/9CB181258J088225Y/refund",
+                "href": "https://api.sandbox.paypal.com/v1/payments/sale/0U980718RG113823E/refund",
                 "rel": "refund",
                 "method": "POST"
               },
               {
-                "href": "https://api.sandbox.paypal.com/v1/payments/payment/PAYID-M2W3IZQ6FP60165R5225543K",
+                "href": "https://api.sandbox.paypal.com/v1/payments/payment/PAYID-M2ZBGAY20705093FT733223H",
                 "rel": "parent_payment",
                 "method": "GET"
               }
@@ -404,9 +313,9 @@
       ],
       "amount": {
         "currency": "USD",
-        "total": "982.18",
+        "total": "1784.86",
         "details": {
-          "subtotal": "982.18",
+          "subtotal": "1784.86",
           "shipping": "0.00",
           "handling_fee": "0.00",
           "shipping_discount": "0.00",
@@ -432,296 +341,27 @@
   ],
   "failed_transactions": [],
   "state": "approved",
-  "create_time": "2024-08-03T04:39:01Z",
-  "update_time": "2024-08-03T04:39:11Z",
+  "create_time": "2024-08-06T12:11:46Z",
+  "update_time": "2024-08-06T12:12:09Z",
   "links": [
     {
-      "href": "https://api.sandbox.paypal.com/v1/payments/payment/PAYID-M2W3IZQ6FP60165R5225543K",
+      "href": "https://api.sandbox.paypal.com/v1/payments/payment/PAYID-M2ZBGAY20705093FT733223H",
       "rel": "self",
       "method": "GET"
     }
   ]
 }
-2024-08-03T11:39:12.157+07:00  INFO 13824 --- [CommonService] [http-nio-8009-exec-2] c.l.p.Controller.PaypalController        : Dữ liệu thanh toán: {"id":326128,"userId":2,"items":[{"productId":2,"name":"Sample Productf","price":100.0,"quantity":1,"weight":2,"warehouseIds":"1,2","primaryImageUrl":"/uploads/68c99844-0a28-4bf5-8a99-26ee36e76c6b-o.jpg"}],"selectedShipping":{"id":1,"name":"Ship Thường","pricePerKm":3.0,"pricePerKg":3.0},"distanceData":{"userId":0,"receiverName":"fff","provinceCity":"Tỉnh Bình Phước","district":"Huyện Hớn Quản","ward":"Xã Phước An","street":"hghghg","originLatitude":11.623699763447684,"originLongitude":106.63380893803875,"warehouseId":2,"warehouseName":"nhanh","warehouseProvinceCity":"Tỉnh Đắk Lắk","warehouseDistrict":"Huyện Krông Búk","warehouseWard":"Xã Cư Pơng","destinationLatitude":12.972068,"destinationLongitude":108.1698525,"distance":292.06},"total":982.1800000000001}
-2024-08-03T11:39:12.212+07:00  INFO 13824 --- [CommonService] [http-nio-8009-exec-2] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
-	acks = -1
-	auto.include.jmx.reporter = true
-	batch.size = 16384
-	bootstrap.servers = [localhost:9092]
-	buffer.memory = 33554432
-	client.dns.lookup = use_all_dns_ips
-	client.id = producer-1
-	compression.type = none
-	connections.max.idle.ms = 540000
-	delivery.timeout.ms = 120000
-	enable.idempotence = true
-	interceptor.classes = []
-	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
-	linger.ms = 0
-	max.block.ms = 60000
-	max.in.flight.requests.per.connection = 5
-	max.request.size = 1048576
-	metadata.max.age.ms = 300000
-	metadata.max.idle.ms = 300000
-	metric.reporters = []
-	metrics.num.samples = 2
-	metrics.recording.level = INFO
-	metrics.sample.window.ms = 30000
-	partitioner.adaptive.partitioning.enable = true
-	partitioner.availability.timeout.ms = 0
-	partitioner.class = null
-	partitioner.ignore.keys = false
-	receive.buffer.bytes = 32768
-	reconnect.backoff.max.ms = 1000
-	reconnect.backoff.ms = 50
-	request.timeout.ms = 30000
-	retries = 2147483647
-	retry.backoff.ms = 100
-	sasl.client.callback.handler.class = null
-	sasl.jaas.config = null
-	sasl.kerberos.kinit.cmd = /usr/bin/kinit
-	sasl.kerberos.min.time.before.relogin = 60000
-	sasl.kerberos.service.name = null
-	sasl.kerberos.ticket.renew.jitter = 0.05
-	sasl.kerberos.ticket.renew.window.factor = 0.8
-	sasl.login.callback.handler.class = null
-	sasl.login.class = null
-	sasl.login.connect.timeout.ms = null
-	sasl.login.read.timeout.ms = null
-	sasl.login.refresh.buffer.seconds = 300
-	sasl.login.refresh.min.period.seconds = 60
-	sasl.login.refresh.window.factor = 0.8
-	sasl.login.refresh.window.jitter = 0.05
-	sasl.login.retry.backoff.max.ms = 10000
-	sasl.login.retry.backoff.ms = 100
-	sasl.mechanism = GSSAPI
-	sasl.oauthbearer.clock.skew.seconds = 30
-	sasl.oauthbearer.expected.audience = null
-	sasl.oauthbearer.expected.issuer = null
-	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
-	sasl.oauthbearer.jwks.endpoint.url = null
-	sasl.oauthbearer.scope.claim.name = scope
-	sasl.oauthbearer.sub.claim.name = sub
-	sasl.oauthbearer.token.endpoint.url = null
-	security.protocol = PLAINTEXT
-	security.providers = null
-	send.buffer.bytes = 131072
-	socket.connection.setup.timeout.max.ms = 30000
-	socket.connection.setup.timeout.ms = 10000
-	ssl.cipher.suites = null
-	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
-	ssl.endpoint.identification.algorithm = https
-	ssl.engine.factory.class = null
-	ssl.key.password = null
-	ssl.keymanager.algorithm = SunX509
-	ssl.keystore.certificate.chain = null
-	ssl.keystore.key = null
-	ssl.keystore.location = null
-	ssl.keystore.password = null
-	ssl.keystore.type = JKS
-	ssl.protocol = TLSv1.3
-	ssl.provider = null
-	ssl.secure.random.implementation = null
-	ssl.trustmanager.algorithm = PKIX
-	ssl.truststore.certificates = null
-	ssl.truststore.location = null
-	ssl.truststore.password = null
-	ssl.truststore.type = JKS
-	transaction.timeout.ms = 60000
-	transactional.id = null
-	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
-
-2024-08-03T11:39:12.245+07:00  INFO 13824 --- [CommonService] [http-nio-8009-exec-2] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
-2024-08-03T11:39:12.309+07:00  INFO 13824 --- [CommonService] [http-nio-8009-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.2
-2024-08-03T11:39:12.310+07:00  INFO 13824 --- [CommonService] [http-nio-8009-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c4deed513057c94e
-2024-08-03T11:39:12.310+07:00  INFO 13824 --- [CommonService] [http-nio-8009-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1722659952306
-2024-08-03T11:39:12.877+07:00 ERROR 13824 --- [CommonService] [http-nio-8009-exec-7] c.l.C.advide.ExceptionAdvide             : Unknown internal server error: Required request parameter 'PayerID' for method parameter type String is not present
-2024-08-03T11:39:12.877+07:00 ERROR 13824 --- [CommonService] [http-nio-8009-exec-7] c.l.C.advide.ExceptionAdvide             : Exception class: class org.springframework.web.bind.MissingServletRequestParameterException
-2024-08-03T11:39:12.877+07:00 ERROR 13824 --- [CommonService] [http-nio-8009-exec-7] c.l.C.advide.ExceptionAdvide             : Exception cause: null
-2024-08-03T11:39:12.917+07:00 ERROR 13824 --- [CommonService] [http-nio-8009-exec-9] c.l.C.advide.ExceptionAdvide             : Unknown internal server error: Required request parameter 'PayerID' for method parameter type String is not present
-2024-08-03T11:39:12.917+07:00 ERROR 13824 --- [CommonService] [http-nio-8009-exec-9] c.l.C.advide.ExceptionAdvide             : Exception class: class org.springframework.web.bind.MissingServletRequestParameterException
-2024-08-03T11:39:12.918+07:00 ERROR 13824 --- [CommonService] [http-nio-8009-exec-9] c.l.C.advide.ExceptionAdvide             : Exception cause: null
-2024-08-03T11:39:12.997+07:00  INFO 13824 --- [CommonService] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: viDAuDrvQM-vsXuoC_W1_Q
-2024-08-03T11:39:12.999+07:00  INFO 13824 --- [CommonService] [kafka-producer-network-thread | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 39001 with epoch 0
-2024-08-03T11:39:13.044+07:00  INFO 13824 --- [CommonService] [kafka-producer-network-thread | producer-1] c.l.payment_service.Event.EventProducer  : Message sent to topic PaymentSuccess: {"id":326128,"userId":2,"items":[{"productId":2,"name":"Sample Productf","price":100.0,"quantity":1,"weight":2,"warehouseIds":"1,2","primaryImageUrl":"/uploads/68c99844-0a28-4bf5-8a99-26ee36e76c6b-o.jpg"}],"selectedShipping":{"id":1,"name":"Ship Thường","pricePerKm":3.0,"pricePerKg":3.0},"distanceData":{"userId":0,"receiverName":"fff","provinceCity":"Tỉnh Bình Phước","district":"Huyện Hớn Quản","ward":"Xã Phước An","street":"hghghg","originLatitude":11.623699763447684,"originLongitude":106.63380893803875,"warehouseId":2,"warehouseName":"nhanh","warehouseProvinceCity":"Tỉnh Đắk Lắk","warehouseDistrict":"Huyện Krông Búk","warehouseWard":"Xã Cư Pơng","destinationLatitude":12.972068,"destinationLongitude":108.1698525,"distance":292.06},"total":982.1800000000001}
-2024-08-03T11:39:13.045+07:00  INFO 13824 --- [CommonService] [kafka-producer-network-thread | producer-1] c.l.p.Controller.PaypalController        : Sent payment data to Kafka: OK
-2024-08-03T11:40:59.851+07:00  INFO 13824 --- [CommonService] [http-nio-8009-exec-3] c.l.p.Controller.PaypalController        : Thanh toán thành công: {
-  "id": "PAYID-M2W3JUQ1XR99707B96692837",
-  "intent": "sale",
-  "payer": {
-    "payment_method": "paypal",
-    "status": "VERIFIED",
-    "payer_info": {
-      "email": "15102002@personal.example.com",
-      "first_name": "John",
-      "last_name": "Doe",
-      "payer_id": "682LVCHCAMN9Q",
-      "country_code": "US",
-      "shipping_address": {
-        "recipient_name": "John Doe",
-        "line1": "1 Main St",
-        "city": "San Jose",
-        "country_code": "US",
-        "postal_code": "95131",
-        "state": "CA"
-      }
-    }
-  },
-  "cart": "4CS04305TU445905M",
-  "transactions": [
-    {
-      "related_resources": [
-        {
-          "sale": {
-            "id": "33P79088XB657893U",
-            "amount": {
-              "currency": "USD",
-              "total": "3229.18",
-              "details": {
-                "subtotal": "3229.18",
-                "shipping": "0.00",
-                "handling_fee": "0.00",
-                "shipping_discount": "0.00",
-                "insurance": "0.00"
-              }
-            },
-            "payment_mode": "INSTANT_TRANSFER",
-            "state": "completed",
-            "protection_eligibility": "ELIGIBLE",
-            "protection_eligibility_type": "ITEM_NOT_RECEIVED_ELIGIBLE,UNAUTHORIZED_PAYMENT_ELIGIBLE",
-            "transaction_fee": {
-              "currency": "USD",
-              "value": "113.19"
-            },
-            "parent_payment": "PAYID-M2W3JUQ1XR99707B96692837",
-            "create_time": "2024-08-03T04:40:58Z",
-            "update_time": "2024-08-03T04:40:58Z",
-            "links": [
-              {
-                "href": "https://api.sandbox.paypal.com/v1/payments/sale/33P79088XB657893U",
-                "rel": "self",
-                "method": "GET"
-              },
-              {
-                "href": "https://api.sandbox.paypal.com/v1/payments/sale/33P79088XB657893U/refund",
-                "rel": "refund",
-                "method": "POST"
-              },
-              {
-                "href": "https://api.sandbox.paypal.com/v1/payments/payment/PAYID-M2W3JUQ1XR99707B96692837",
-                "rel": "parent_payment",
-                "method": "GET"
-              }
-            ]
-          }
-        }
-      ],
-      "amount": {
-        "currency": "USD",
-        "total": "3229.18",
-        "details": {
-          "subtotal": "3229.18",
-          "shipping": "0.00",
-          "handling_fee": "0.00",
-          "shipping_discount": "0.00",
-          "insurance": "0.00"
-        }
-      },
-      "payee": {
-        "email": "sb-vkj8131074225@business.example.com",
-        "merchant_id": "YUGBVHGSQHYDJ"
-      },
-      "description": "Payment description",
-      "item_list": {
-        "shipping_address": {
-          "recipient_name": "John Doe",
-          "line1": "1 Main St",
-          "city": "San Jose",
-          "country_code": "US",
-          "postal_code": "95131",
-          "state": "CA"
-        }
-      }
-    }
-  ],
-  "failed_transactions": [],
-  "state": "approved",
-  "create_time": "2024-08-03T04:40:49Z",
-  "update_time": "2024-08-03T04:40:58Z",
-  "links": [
-    {
-      "href": "https://api.sandbox.paypal.com/v1/payments/payment/PAYID-M2W3JUQ1XR99707B96692837",
-      "rel": "self",
-      "method": "GET"
-    }
-  ]
-}
-2024-08-03T11:40:59.857+07:00  INFO 13824 --- [CommonService] [http-nio-8009-exec-3] c.l.p.Controller.PaypalController        : Dữ liệu thanh toán: {"id":567693,"userId":2,"items":[{"productId":4,"name":"ewqrefwq","price":22.0,"quantity":1,"weight":777,"warehouseIds":"1,2,3","primaryImageUrl":"/uploads/1a667bc7-11aa-4867-9cb8-4746a65587c6-Screenshot 2024-07-12 135940.png"}],"selectedShipping":{"id":1,"name":"Ship Thường","pricePerKm":3.0,"pricePerKg":3.0},"distanceData":{"userId":0,"receiverName":"fff","provinceCity":"Tỉnh Bình Phước","district":"Huyện Hớn Quản","ward":"Xã Phước An","street":"hghghg","originLatitude":11.623699763447684,"originLongitude":106.63380893803875,"warehouseId":2,"warehouseName":"nhanh","warehouseProvinceCity":"Tỉnh Đắk Lắk","warehouseDistrict":"Huyện Krông Búk","warehouseWard":"Xã Cư Pơng","destinationLatitude":12.972068,"destinationLongitude":108.1698525,"distance":292.06},"total":3229.1800000000003}
-2024-08-03T11:40:59.866+07:00  INFO 13824 --- [CommonService] [kafka-producer-network-thread | producer-1] c.l.payment_service.Event.EventProducer  : Message sent to topic PaymentSuccess: {"id":567693,"userId":2,"items":[{"productId":4,"name":"ewqrefwq","price":22.0,"quantity":1,"weight":777,"warehouseIds":"1,2,3","primaryImageUrl":"/uploads/1a667bc7-11aa-4867-9cb8-4746a65587c6-Screenshot 2024-07-12 135940.png"}],"selectedShipping":{"id":1,"name":"Ship Thường","pricePerKm":3.0,"pricePerKg":3.0},"distanceData":{"userId":0,"receiverName":"fff","provinceCity":"Tỉnh Bình Phước","district":"Huyện Hớn Quản","ward":"Xã Phước An","street":"hghghg","originLatitude":11.623699763447684,"originLongitude":106.63380893803875,"warehouseId":2,"warehouseName":"nhanh","warehouseProvinceCity":"Tỉnh Đắk Lắk","warehouseDistrict":"Huyện Krông Búk","warehouseWard":"Xã Cư Pơng","destinationLatitude":12.972068,"destinationLongitude":108.1698525,"distance":292.06},"total":3229.1800000000003}
-2024-08-03T11:40:59.868+07:00  INFO 13824 --- [CommonService] [kafka-producer-network-thread | producer-1] c.l.p.Controller.PaypalController        : Sent payment data to Kafka: OK
-2024-08-03T11:41:00.415+07:00 ERROR 13824 --- [CommonService] [http-nio-8009-exec-8] c.l.C.advide.ExceptionAdvide             : Unknown internal server error: Required request parameter 'PayerID' for method parameter type String is not present
-2024-08-03T11:41:00.415+07:00 ERROR 13824 --- [CommonService] [http-nio-8009-exec-8] c.l.C.advide.ExceptionAdvide             : Exception class: class org.springframework.web.bind.MissingServletRequestParameterException
-2024-08-03T11:41:00.416+07:00 ERROR 13824 --- [CommonService] [http-nio-8009-exec-8] c.l.C.advide.ExceptionAdvide             : Exception cause: null
-2024-08-03T11:41:00.420+07:00 ERROR 13824 --- [CommonService] [http-nio-8009-exec-10] c.l.C.advide.ExceptionAdvide             : Unknown internal server error: Required request parameter 'PayerID' for method parameter type String is not present
-2024-08-03T11:41:00.420+07:00 ERROR 13824 --- [CommonService] [http-nio-8009-exec-10] c.l.C.advide.ExceptionAdvide             : Exception class: class org.springframework.web.bind.MissingServletRequestParameterException
-2024-08-03T11:41:00.421+07:00 ERROR 13824 --- [CommonService] [http-nio-8009-exec-10] c.l.C.advide.ExceptionAdvide             : Exception cause: null
-2024-08-03T11:41:20.359+07:00 ERROR 13824 --- [CommonService] [http-nio-8009-exec-4] c.l.C.advide.ExceptionAdvide             : Unknown internal server error: Required request parameter 'PayerID' for method parameter type String is not present
-2024-08-03T11:41:20.360+07:00 ERROR 13824 --- [CommonService] [http-nio-8009-exec-4] c.l.C.advide.ExceptionAdvide             : Exception class: class org.springframework.web.bind.MissingServletRequestParameterException
-2024-08-03T11:41:20.360+07:00 ERROR 13824 --- [CommonService] [http-nio-8009-exec-4] c.l.C.advide.ExceptionAdvide             : Exception cause: null
-2024-08-03T11:41:20.364+07:00 ERROR 13824 --- [CommonService] [http-nio-8009-exec-1] c.l.C.advide.ExceptionAdvide             : Unknown internal server error: Required request parameter 'PayerID' for method parameter type String is not present
-2024-08-03T11:41:20.364+07:00 ERROR 13824 --- [CommonService] [http-nio-8009-exec-1] c.l.C.advide.ExceptionAdvide             : Exception class: class org.springframework.web.bind.MissingServletRequestParameterException
-2024-08-03T11:41:20.364+07:00 ERROR 13824 --- [CommonService] [http-nio-8009-exec-1] c.l.C.advide.ExceptionAdvide             : Exception cause: null
-2024-08-03T11:42:32.664+07:00 ERROR 13824 --- [CommonService] [http-nio-8009-exec-7] c.l.C.advide.ExceptionAdvide             : Unknown internal server error: Required request parameter 'PayerID' for method parameter type String is not present
-2024-08-03T11:42:32.664+07:00 ERROR 13824 --- [CommonService] [http-nio-8009-exec-7] c.l.C.advide.ExceptionAdvide             : Exception class: class org.springframework.web.bind.MissingServletRequestParameterException
-2024-08-03T11:42:32.664+07:00 ERROR 13824 --- [CommonService] [http-nio-8009-exec-7] c.l.C.advide.ExceptionAdvide             : Exception cause: null
-2024-08-03T11:44:24.691+07:00 ERROR 13824 --- [CommonService] [http-nio-8009-exec-9] c.l.C.advide.ExceptionAdvide             : Unknown internal server error: Required request parameter 'PayerID' for method parameter type String is not present
-2024-08-03T11:44:24.691+07:00 ERROR 13824 --- [CommonService] [http-nio-8009-exec-9] c.l.C.advide.ExceptionAdvide             : Exception class: class org.springframework.web.bind.MissingServletRequestParameterException
-2024-08-03T11:44:24.692+07:00 ERROR 13824 --- [CommonService] [http-nio-8009-exec-9] c.l.C.advide.ExceptionAdvide             : Exception cause: null
-2024-08-03T11:46:08.196+07:00 ERROR 13824 --- [CommonService] [http-nio-8009-exec-5] c.l.C.advide.ExceptionAdvide             : Unknown internal server error: Required request parameter 'PayerID' for method parameter type String is not present
-2024-08-03T11:46:08.197+07:00 ERROR 13824 --- [CommonService] [http-nio-8009-exec-5] c.l.C.advide.ExceptionAdvide             : Exception class: class org.springframework.web.bind.MissingServletRequestParameterException
-2024-08-03T11:46:08.197+07:00 ERROR 13824 --- [CommonService] [http-nio-8009-exec-5] c.l.C.advide.ExceptionAdvide             : Exception cause: null
-2024-08-03T11:47:48.563+07:00 ERROR 13824 --- [CommonService] [http-nio-8009-exec-6] c.l.C.advide.ExceptionAdvide             : Unknown internal server error: Required request parameter 'PayerID' for method parameter type String is not present
-2024-08-03T11:47:48.563+07:00 ERROR 13824 --- [CommonService] [http-nio-8009-exec-6] c.l.C.advide.ExceptionAdvide             : Exception class: class org.springframework.web.bind.MissingServletRequestParameterException
-2024-08-03T11:47:48.563+07:00 ERROR 13824 --- [CommonService] [http-nio-8009-exec-6] c.l.C.advide.ExceptionAdvide             : Exception cause: null
-2024-08-03T11:48:13.071+07:00  INFO 13824 --- [CommonService] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
-2024-08-03T11:50:00.487+07:00 ERROR 13824 --- [CommonService] [http-nio-8009-exec-3] c.l.C.advide.ExceptionAdvide             : Unknown internal server error: Required request parameter 'PayerID' for method parameter type String is not present
-2024-08-03T11:50:00.487+07:00 ERROR 13824 --- [CommonService] [http-nio-8009-exec-3] c.l.C.advide.ExceptionAdvide             : Exception class: class org.springframework.web.bind.MissingServletRequestParameterException
-2024-08-03T11:50:00.487+07:00 ERROR 13824 --- [CommonService] [http-nio-8009-exec-3] c.l.C.advide.ExceptionAdvide             : Exception cause: null
-2024-08-03T11:50:00.491+07:00 ERROR 13824 --- [CommonService] [http-nio-8009-exec-8] c.l.C.advide.ExceptionAdvide             : Unknown internal server error: Required request parameter 'PayerID' for method parameter type String is not present
-2024-08-03T11:50:00.491+07:00 ERROR 13824 --- [CommonService] [http-nio-8009-exec-8] c.l.C.advide.ExceptionAdvide             : Exception class: class org.springframework.web.bind.MissingServletRequestParameterException
-2024-08-03T11:50:00.491+07:00 ERROR 13824 --- [CommonService] [http-nio-8009-exec-8] c.l.C.advide.ExceptionAdvide             : Exception cause: null
-2024-08-03T11:50:04.309+07:00 ERROR 13824 --- [CommonService] [http-nio-8009-exec-10] c.l.C.advide.ExceptionAdvide             : Unknown internal server error: Required request parameter 'PayerID' for method parameter type String is not present
-2024-08-03T11:50:04.310+07:00 ERROR 13824 --- [CommonService] [http-nio-8009-exec-10] c.l.C.advide.ExceptionAdvide             : Exception class: class org.springframework.web.bind.MissingServletRequestParameterException
-2024-08-03T11:50:04.310+07:00 ERROR 13824 --- [CommonService] [http-nio-8009-exec-10] c.l.C.advide.ExceptionAdvide             : Exception cause: null
-2024-08-03T11:50:04.319+07:00 ERROR 13824 --- [CommonService] [http-nio-8009-exec-4] c.l.C.advide.ExceptionAdvide             : Unknown internal server error: Required request parameter 'PayerID' for method parameter type String is not present
-2024-08-03T11:50:04.319+07:00 ERROR 13824 --- [CommonService] [http-nio-8009-exec-4] c.l.C.advide.ExceptionAdvide             : Exception class: class org.springframework.web.bind.MissingServletRequestParameterException
-2024-08-03T11:50:04.319+07:00 ERROR 13824 --- [CommonService] [http-nio-8009-exec-4] c.l.C.advide.ExceptionAdvide             : Exception cause: null
-2024-08-03T13:57:08.647+07:00  INFO 13824 --- [CommonService] [SpringApplicationShutdownHook] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
-2024-08-03T13:57:08.667+07:00  INFO 13824 --- [CommonService] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
-2024-08-03T13:57:08.667+07:00  INFO 13824 --- [CommonService] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
-2024-08-03T13:57:08.668+07:00  INFO 13824 --- [CommonService] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
-2024-08-03T13:57:08.670+07:00  INFO 13824 --- [CommonService] [SpringApplicationShutdownHook] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for producer-1 unregistered
-2024-08-03T14:55:56.800+07:00  INFO 17608 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Starting PaymentServiceApplication using Java 17.0.7 with PID 17608 (C:\CODE\FINAL MAIN\test2\payment-service\target\classes started by ASUS in C:\CODE\FINAL MAIN\test2\OrderService)
-2024-08-03T14:55:56.802+07:00 DEBUG 17608 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Running with Spring Boot v3.2.7-SNAPSHOT, Spring v6.1.10
-2024-08-03T14:55:56.803+07:00  INFO 17608 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : No active profile set, falling back to 1 default profile: "default"
-2024-08-03T14:55:58.292+07:00  INFO 17608 --- [CommonService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8009 (http)
-2024-08-03T14:55:58.305+07:00  INFO 17608 --- [CommonService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-08-03T14:55:58.305+07:00  INFO 17608 --- [CommonService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-08-03T14:55:58.369+07:00  INFO 17608 --- [CommonService] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-08-03T14:55:58.370+07:00  INFO 17608 --- [CommonService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1521 ms
-2024-08-03T14:55:58.936+07:00  WARN 17608 --- [CommonService] [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
-2024-08-03T14:55:59.189+07:00  INFO 17608 --- [CommonService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8009 (http) with context path ''
-2024-08-03T14:55:59.201+07:00  INFO 17608 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Started PaymentServiceApplication in 2.89 seconds (process running for 5.006)
-2024-08-03T14:56:17.665+07:00  INFO 3376 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Starting PaymentServiceApplication using Java 17.0.7 with PID 3376 (C:\CODE\FINAL MAIN\test2\payment-service\target\classes started by ASUS in C:\CODE\FINAL MAIN\test2\OrderService)
-2024-08-03T14:56:17.667+07:00 DEBUG 3376 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Running with Spring Boot v3.2.7-SNAPSHOT, Spring v6.1.10
-2024-08-03T14:56:17.668+07:00  INFO 3376 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : No active profile set, falling back to 1 default profile: "default"
-2024-08-03T14:56:18.832+07:00  INFO 3376 --- [CommonService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8009 (http)
-2024-08-03T14:56:18.845+07:00  INFO 3376 --- [CommonService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-08-03T14:56:18.846+07:00  INFO 3376 --- [CommonService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-08-03T14:56:18.918+07:00  INFO 3376 --- [CommonService] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-08-03T14:56:18.918+07:00  INFO 3376 --- [CommonService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1203 ms
-2024-08-03T14:56:19.599+07:00  WARN 3376 --- [CommonService] [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
-2024-08-03T14:56:19.837+07:00  INFO 3376 --- [CommonService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8009 (http) with context path ''
-2024-08-03T14:56:19.848+07:00  INFO 3376 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Started PaymentServiceApplication in 2.835 seconds (process running for 3.49)
+2024-08-06T19:12:10.184+07:00  INFO 18812 --- [CommonService] [http-nio-8009-exec-9] c.l.p.Controller.PaypalController        : Dữ liệu thanh toán: {"id":903272,"userId":1,"items":[{"productId":2,"name":"Sample Productf","price":100.0,"quantity":4,"weight":2,"warehouseIds":"1,2","primaryImageUrl":"/uploads/68c99844-0a28-4bf5-8a99-26ee36e76c6b-o.jpg"},{"productId":5,"name":"fsafsafsa","price":33.0,"quantity":1,"weight":432,"warehouseIds":"3","primaryImageUrl":""}],"selectedShipping":{"id":1,"name":"Ship Thường","pricePerKm":3.0,"pricePerKg":3.0},"distanceData":{"userId":0,"receiverName":"àdsafdsaf","provinceCity":"Thành phố Đà Nẵng","district":"Quận Hải Châu","ward":"Phường Hải Châu II","street":"dsafdsfa","originLatitude":16.0664448,"originLongitude":108.2163913,"warehouseId":1,"warehouseName":"linh","warehouseProvinceCity":"Thành phố Đà Nẵng","warehouseDistrict":"Quận Ngũ Hành Sơn","warehouseWard":"Phường Hoà Hải","destinationLatitude":15.9962329,"destinationLongitude":108.2642553,"distance":10.62},"total":1784.86}
+2024-08-06T19:12:10.205+07:00  INFO 18812 --- [CommonService] [kafka-producer-network-thread | producer-1] c.l.payment_service.Event.EventProducer  : Message sent to topic PaymentSuccess: {"id":903272,"userId":1,"items":[{"productId":2,"name":"Sample Productf","price":100.0,"quantity":4,"weight":2,"warehouseIds":"1,2","primaryImageUrl":"/uploads/68c99844-0a28-4bf5-8a99-26ee36e76c6b-o.jpg"},{"productId":5,"name":"fsafsafsa","price":33.0,"quantity":1,"weight":432,"warehouseIds":"3","primaryImageUrl":""}],"selectedShipping":{"id":1,"name":"Ship Thường","pricePerKm":3.0,"pricePerKg":3.0},"distanceData":{"userId":0,"receiverName":"àdsafdsaf","provinceCity":"Thành phố Đà Nẵng","district":"Quận Hải Châu","ward":"Phường Hải Châu II","street":"dsafdsfa","originLatitude":16.0664448,"originLongitude":108.2163913,"warehouseId":1,"warehouseName":"linh","warehouseProvinceCity":"Thành phố Đà Nẵng","warehouseDistrict":"Quận Ngũ Hành Sơn","warehouseWard":"Phường Hoà Hải","destinationLatitude":15.9962329,"destinationLongitude":108.2642553,"distance":10.62},"total":1784.86}
+2024-08-06T19:12:10.206+07:00  INFO 18812 --- [CommonService] [kafka-producer-network-thread | producer-1] c.l.p.Controller.PaypalController        : Sent payment data to Kafka: OK
+2024-08-06T19:12:11.103+07:00 ERROR 18812 --- [CommonService] [http-nio-8009-exec-10] c.l.C.advide.ExceptionAdvide             : Unknown internal server error: Required request parameter 'PayerID' for method parameter type String is not present
+2024-08-06T19:12:11.104+07:00 ERROR 18812 --- [CommonService] [http-nio-8009-exec-10] c.l.C.advide.ExceptionAdvide             : Exception class: class org.springframework.web.bind.MissingServletRequestParameterException
+2024-08-06T19:12:11.104+07:00 ERROR 18812 --- [CommonService] [http-nio-8009-exec-10] c.l.C.advide.ExceptionAdvide             : Exception cause: null
+2024-08-06T19:12:11.111+07:00 ERROR 18812 --- [CommonService] [http-nio-8009-exec-1] c.l.C.advide.ExceptionAdvide             : Unknown internal server error: Required request parameter 'PayerID' for method parameter type String is not present
+2024-08-06T19:12:11.111+07:00 ERROR 18812 --- [CommonService] [http-nio-8009-exec-1] c.l.C.advide.ExceptionAdvide             : Exception class: class org.springframework.web.bind.MissingServletRequestParameterException
+2024-08-06T19:12:11.111+07:00 ERROR 18812 --- [CommonService] [http-nio-8009-exec-1] c.l.C.advide.ExceptionAdvide             : Exception cause: null
+2024-08-06T21:01:47.340+07:00  INFO 18812 --- [CommonService] [SpringApplicationShutdownHook] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+2024-08-06T21:01:47.354+07:00  INFO 18812 --- [CommonService] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2024-08-06T21:01:47.354+07:00  INFO 18812 --- [CommonService] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-08-06T21:01:47.354+07:00  INFO 18812 --- [CommonService] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2024-08-06T21:01:47.355+07:00  INFO 18812 --- [CommonService] [SpringApplicationShutdownHook] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for producer-1 unregistered

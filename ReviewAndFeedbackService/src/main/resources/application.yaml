@@ -1,0 +1,17 @@
+server:
+  port: 4004
+
+spring:
+  application:
+    name: ReviewAndFeedbackService
+  r2dbc:
+    url: r2dbc:pool:mysql://localhost:3306/ReviewAndFeedbackService
+    username: root
+    password:
+  liquibase:
+    url: jdbc:mysql://localhost:3306/ReviewAndFeedbackService
+    enabled: true
+    user: root
+    password:
+    change-log: classpath:db/changelog/changelog-master.xml
+

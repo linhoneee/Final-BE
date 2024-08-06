@@ -26,4 +26,9 @@ public class OrderController {
     public Flux<Order> getAllOrdersByUserId(@PathVariable int userId) {
         return orderService.getAllOrders(userId);
     }
+    @PatchMapping("/{orderId}/products/{productId}/reviewed")
+    public Mono<Order> markProductAsReviewed(@PathVariable Long orderId, @PathVariable int productId) {
+        return orderService.markProductAsReviewed(orderId, productId);
+    }
+
 }
