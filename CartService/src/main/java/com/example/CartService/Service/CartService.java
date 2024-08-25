@@ -186,7 +186,6 @@ public class CartService {
                     for (Item existingItem : items) {
                         if (existingItem.getProductId().equals(item.getProductId())) {
                             existingItem.setQuantity(existingItem.getQuantity() + item.getQuantity());
-                            existingItem.setWarehouseIds(item.getWarehouseIds()); // Update warehouseIds
                             existingItem.setPrimaryImageUrl(item.getPrimaryImageUrl()); // Update primaryImageUrl
                             itemExists = true;
                             break;

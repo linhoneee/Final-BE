@@ -15,7 +15,6 @@ public class Item {
     private BigDecimal price;
     private Integer quantity;
     private Integer weight;
-    private String warehouseIds;
     private String primaryImageUrl;
 
 }

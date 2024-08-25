@@ -62,7 +62,7 @@ public class ProductService {
         Mono<Product> productMono = productRepository.findById(id);
         Flux<ProductImage> imagesFlux = productImageService.getImagesByProductId(id);
 
-        return productMono.zipWith(imagesFlux.collectList(), ProductDTO::new);
+        return productMono.zipWith(imagesFlux.collectList(), (product, images) -> new ProductDTO(product, images));
     }
 
     public Mono<Product> updateProduct(Long id, Product product) {
@@ -122,5 +122,9 @@ public class ProductService {
                     return productImageRepository.save(image);
                 })
                 .then(productImageRepository.findById(imageId)); // Return the primary image
+    }
+
+    public Flux<Product> getProductsByFilters(String searchTerm, Long brandId, Long categoryId, String sortOrder) {
+        return productRepository.findAllByFilters(searchTerm, brandId, categoryId, sortOrder);
     }
 }

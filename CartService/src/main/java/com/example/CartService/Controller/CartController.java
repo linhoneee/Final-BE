@@ -15,6 +15,12 @@ public class CartController {
     @Autowired
     private CartService cartService;
 
+    @GetMapping("/hi")
+    public String getHi() {
+        return "hihi";
+    }
+
+
     @CrossOrigin
     @GetMapping("/{userId}")
     public Mono<Cart> getCart(@PathVariable Long userId) {

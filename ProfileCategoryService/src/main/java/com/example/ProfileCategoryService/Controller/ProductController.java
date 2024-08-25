@@ -85,6 +85,14 @@ public class ProductController {
                 .map(ResponseEntity::ok)
                 .defaultIfEmpty(ResponseEntity.notFound().build());
     }
+    @GetMapping("/search")
+    public Flux<Product> getProductsByFilters(
+            @RequestParam(required = false) String searchTerm,
+            @RequestParam(required = false) Long brandId,
+            @RequestParam(required = false) Long categoryId,
+            @RequestParam(required = false) String sortOrder) {
+        return productService.getProductsByFilters(searchTerm, brandId, categoryId, sortOrder);
+    }
 }
 
 

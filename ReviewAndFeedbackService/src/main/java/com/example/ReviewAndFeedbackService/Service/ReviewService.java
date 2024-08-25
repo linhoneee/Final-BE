@@ -24,37 +24,20 @@ public class ReviewService {
     @Autowired
     private RestTemplate restTemplate;
 
-    public Mono<Review> addReview(Long productId, Long userId, int rating, String comment, Long parentId) {
-        if (parentId != null) {
-            // Đây là phản hồi, không kiểm tra điều kiện
-            Review review = new Review();
-            review.setProductId(productId);
-            review.setUserId(userId);
-            review.setRating(rating);
-            review.setComment(comment);
-            review.setCreatedAt(LocalDateTime.now());
-            review.setParentId(parentId);
-            return reviewRepository.save(review);
-        } else {
-            // Đây là review mới, kiểm tra điều kiện
-            return reviewRepository.existsByProductIdAndUserIdAndParentIdIsNull(productId, userId)
-                    .flatMap(exists -> {
-                        if (exists) {
-                            return Mono.error(new IllegalArgumentException("User has already reviewed this product"));
-                        }
 
-                        Review review = new Review();
-                        review.setProductId(productId);
-                        review.setUserId(userId);
-                        review.setRating(rating);
-                        review.setComment(comment);
-                        review.setCreatedAt(LocalDateTime.now());
-                        review.setParentId(null);
-                        return reviewRepository.save(review);
-                    });
-        }
+    public Mono<Review> addReview(Long productId, Long userId, int rating, String comment, Long parentId) {
+        Review review = new Review();
+        review.setProductId(productId);
+        review.setUserId(userId);
+        review.setRating(rating);
+        review.setComment(comment);
+        review.setCreatedAt(LocalDateTime.now());
+        review.setParentId(parentId);
+
+        return reviewRepository.save(review);
     }
 
+    
     public Flux<ReviewWithUser> getReviewsByProductId(Long productId) {
         return reviewRepository.findByProductId(productId)
                 .flatMap(review -> getUserInfo(review.getUserId())

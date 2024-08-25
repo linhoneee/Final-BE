@@ -21,4 +21,9 @@ public class ChatMessageService {
     public List<ChatMessage> getAllMessages() {
         return chatMessageRepository.findAll();
     }
+
+    public List<ChatMessage> getLatestMessagesForAllRooms() {
+        return chatMessageRepository.findLatestMessagesForAllRooms();
+    }
+
 }
