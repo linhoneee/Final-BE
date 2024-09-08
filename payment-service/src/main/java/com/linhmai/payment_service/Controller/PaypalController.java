@@ -2,7 +2,7 @@ package com.linhmai.payment_service.Controller;
 
 import com.linhmai.CommonService.utils.Constant;
 import com.linhmai.payment_service.Event.EventProducer;
-import com.linhmai.payment_service.Model.Request;
+import com.linhmai.payment_service.Model.PaymentRequest;
 import com.linhmai.payment_service.Service.PaypalService;
 import com.paypal.api.payments.Payment;
 import com.paypal.base.rest.PayPalRESTException;
@@ -33,22 +33,30 @@ public class PaypalController {
     @Autowired
     private EventProducer eventProducer;
 
-    private Request currentRequest; // Biến lưu trữ yêu cầu hiện tại
+    private PaymentRequest currentPaymentRequest; // Biến lưu trữ yêu cầu hiện tại
 
     @PostMapping("/paypal")
-    public String payment(@RequestBody @Valid Request request) {
+    public String payment(@RequestBody @Valid PaymentRequest paymentRequest) {
         try {
             // Lưu trữ yêu cầu hiện tại
-            this.currentRequest = request;
+            this.currentPaymentRequest = paymentRequest;
+
+            // URL success mặc định
+            String successUrl = "http://localhost:8009/payment/success";
+
+            // Điều chỉnh URL success cho mobile app
+            if ("mobile".equalsIgnoreCase(paymentRequest.getPlatform())) {
+                successUrl = "yourapp://payment/success";
+            }
 
             Payment createdPayment = paypalService.createPayment(
-                    request.getTotal(),
+                    paymentRequest.getTotal(),
                     "USD",
                     "paypal",
                     "sale",
                     "Payment description",
                     "http://localhost:8009/payment/cancel",
-                    "http://localhost:8009/payment/success"
+                    successUrl  // Sử dụng URL phù hợp với platform
             );
 
             for (com.paypal.api.payments.Links link : createdPayment.getLinks()) {
@@ -70,18 +78,23 @@ public class PaypalController {
 
             if (executedPayment.getState().equals("approved")) {
                 log.info("Thanh toán thành công: {}", executedPayment.toJSON());
-                log.info("Dữ liệu thanh toán: {}", gson.toJson(this.currentRequest));
+                log.info("Dữ liệu thanh toán: {}", gson.toJson(this.currentPaymentRequest));
 
                 // Gửi dữ liệu vào Kafka topic
-                eventProducer.send(Constant.PAYMENT_SUCCESS_TOPIC, gson.toJson(this.currentRequest))
+                eventProducer.send(Constant.PAYMENT_SUCCESS_TOPIC, gson.toJson(this.currentPaymentRequest))
                         .subscribe(result -> log.info("Sent payment data to Kafka: {}", result),
                                 error -> log.error("Failed to send payment data to Kafka", error));
 
                 // Mã hóa currentRequest thành chuỗi JSON và URL encode
-                String currentRequestJson = URLEncoder.encode(gson.toJson(this.currentRequest), "UTF-8");
+                String currentRequestJson = URLEncoder.encode(gson.toJson(this.currentPaymentRequest), "UTF-8");
 
-                // Redirect người dùng đến trang thành công trên FE với các tham số
-                String redirectUrl = "http://localhost:3000/success?paymentId=" + paymentId + "&PayerID=" + payerId + "&currentRequest=" + currentRequestJson;
+                // Redirect người dùng đến trang thành công trên FE hoặc mở deep link cho mobile
+                String redirectUrl;
+                if ("mobile".equalsIgnoreCase(this.currentPaymentRequest.getPlatform())) {
+                    redirectUrl = "yourapp://payment/success?paymentId=" + paymentId + "&PayerID=" + payerId + "&currentRequest=" + currentRequestJson;
+                } else {
+                    redirectUrl = "http://localhost:3000/success?paymentId=" + paymentId + "&PayerID=" + payerId + "&currentRequest=" + currentRequestJson;
+                }
                 response.sendRedirect(redirectUrl);
                 return;
             }

@@ -10,7 +10,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Request {
+public class PaymentRequest {
     @NotNull
     private Long id;
 
@@ -28,4 +28,6 @@ public class Request {
 
     @NotNull
     private Double total;
+
+    private String platform; // Thêm thuộc tính platform
 }

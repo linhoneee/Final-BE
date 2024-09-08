@@ -3,16 +3,16 @@ package com.linhmai.payment_service.Model;
 public class Response {
     private String id;
     private String clientSecret;
-    private Request request;
+    private PaymentRequest paymentRequest;
     private String errorMessage;
 
     // Constructors
     public Response() {}
 
-    public Response(String id, String clientSecret, Request request) {
+    public Response(String id, String clientSecret, PaymentRequest paymentRequest) {
         this.id = id;
         this.clientSecret = clientSecret;
-        this.request = request;
+        this.paymentRequest = paymentRequest;
     }
 
     public Response(String errorMessage) {
@@ -36,12 +36,12 @@ public class Response {
         this.clientSecret = clientSecret;
     }
 
-    public Request getRequest() {
-        return request;
+    public PaymentRequest getRequest() {
+        return paymentRequest;
     }
 
-    public void setRequest(Request request) {
-        this.request = request;
+    public void setRequest(PaymentRequest paymentRequest) {
+        this.paymentRequest = paymentRequest;
     }
 
     public String getErrorMessage() {
