@@ -19,4 +19,5 @@ public class DistanceData {
     private double destinationLongitude;
     private double distance;
     private String route;
+
 }
