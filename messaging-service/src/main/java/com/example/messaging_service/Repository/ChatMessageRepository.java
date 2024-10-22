@@ -33,6 +33,11 @@ public interface ChatMessageRepository extends JpaRepository<ChatMessage, Long> 
     // Đếm tổng số tin nhắn trong phòng (SQL thuần)
     @Query(value = "SELECT COUNT(*) FROM chat_messages c WHERE c.room_id = :roomId", nativeQuery = true)
     Long countMessagesInRoom(@Param("roomId") Long roomId);
+    @Query(value = "SELECT DISTINCT user_id FROM chat_messages WHERE room_id = :roomId AND user_id <> :senderUserId", nativeQuery = true)
+    List<Long> findAllUserIdsInRoomExceptSender(@Param("roomId") Long roomId, @Param("senderUserId") Long senderUserId);
+
+    @Query(value = "SELECT DISTINCT user_id FROM chat_messages WHERE room_id = :roomId", nativeQuery = true)
+    List<Long> findAllUserIdsInRoom(@Param("roomId") Long roomId);
 
 }
 

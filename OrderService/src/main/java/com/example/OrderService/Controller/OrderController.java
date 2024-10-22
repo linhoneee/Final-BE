@@ -8,6 +8,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Map;
 
 @CrossOrigin(origins = "http://localhost:3000")
@@ -66,4 +67,11 @@ public class OrderController {
     public Mono<Map<String, Object>> getOrderStatistics() {
         return orderService.getOrderStatistics();
     }
+
+
+    @GetMapping("/api/order/top-products")
+    public Mono<List<Map<String, Object>>> getTopSellingProducts() {
+        return orderService.getTopSellingProducts();
+    }
+
 }

@@ -1,22 +1,11 @@
-2024-10-15T01:59:23.206+07:00  INFO 14012 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Starting PaymentServiceApplication using Java 22.0.1 with PID 14012 (C:\CODE\FINAL MAIN\test2\payment-service\target\classes started by ASUS in C:\CODE\FINAL MAIN\test2\OrderService)
-2024-10-15T01:59:23.219+07:00 DEBUG 14012 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Running with Spring Boot v3.2.7-SNAPSHOT, Spring v6.1.10
-2024-10-15T01:59:23.220+07:00  INFO 14012 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : No active profile set, falling back to 1 default profile: "default"
-2024-10-15T01:59:25.978+07:00  INFO 14012 --- [CommonService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8009 (http)
-2024-10-15T01:59:26.001+07:00  INFO 14012 --- [CommonService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-10-15T01:59:26.002+07:00  INFO 14012 --- [CommonService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-10-15T01:59:26.101+07:00  INFO 14012 --- [CommonService] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-10-15T01:59:26.102+07:00  INFO 14012 --- [CommonService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2818 ms
-2024-10-15T01:59:27.106+07:00  WARN 14012 --- [CommonService] [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
-2024-10-15T01:59:27.631+07:00  INFO 14012 --- [CommonService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8009 (http) with context path ''
-2024-10-15T01:59:27.644+07:00  INFO 14012 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Started PaymentServiceApplication in 5.046 seconds (process running for 8.712)
-2024-10-15T02:01:57.104+07:00  INFO 8476 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Starting PaymentServiceApplication using Java 22.0.1 with PID 8476 (C:\CODE\FINAL MAIN\test2\payment-service\target\classes started by ASUS in C:\CODE\FINAL MAIN\test2\OrderService)
-2024-10-15T02:01:57.106+07:00 DEBUG 8476 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Running with Spring Boot v3.2.7-SNAPSHOT, Spring v6.1.10
-2024-10-15T02:01:57.107+07:00  INFO 8476 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : No active profile set, falling back to 1 default profile: "default"
-2024-10-15T02:01:58.736+07:00  INFO 8476 --- [CommonService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8009 (http)
-2024-10-15T02:01:58.755+07:00  INFO 8476 --- [CommonService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-10-15T02:01:58.755+07:00  INFO 8476 --- [CommonService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-10-15T02:01:58.870+07:00  INFO 8476 --- [CommonService] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-10-15T02:01:58.870+07:00  INFO 8476 --- [CommonService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1701 ms
-2024-10-15T02:01:59.921+07:00  WARN 8476 --- [CommonService] [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
-2024-10-15T02:02:00.439+07:00  INFO 8476 --- [CommonService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8009 (http) with context path ''
-2024-10-15T02:02:00.453+07:00  INFO 8476 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Started PaymentServiceApplication in 4.142 seconds (process running for 5.145)
+2024-10-22T16:42:27.677+07:00  INFO 10136 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Starting PaymentServiceApplication using Java 22.0.1 with PID 10136 (C:\CODE\FINAL MAIN\test2\payment-service\target\classes started by ASUS in C:\CODE\FINAL MAIN\test2\OrderService)
+2024-10-22T16:42:27.689+07:00 DEBUG 10136 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Running with Spring Boot v3.2.7-SNAPSHOT, Spring v6.1.10
+2024-10-22T16:42:27.691+07:00  INFO 10136 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : No active profile set, falling back to 1 default profile: "default"
+2024-10-22T16:42:30.135+07:00  INFO 10136 --- [CommonService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8009 (http)
+2024-10-22T16:42:30.189+07:00  INFO 10136 --- [CommonService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-22T16:42:30.190+07:00  INFO 10136 --- [CommonService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-10-22T16:42:30.673+07:00  INFO 10136 --- [CommonService] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-22T16:42:30.674+07:00  INFO 10136 --- [CommonService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2926 ms
+2024-10-22T16:42:31.717+07:00  WARN 10136 --- [CommonService] [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-10-22T16:42:31.970+07:00  INFO 10136 --- [CommonService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8009 (http) with context path ''
+2024-10-22T16:42:31.978+07:00  INFO 10136 --- [CommonService] [main] c.l.p.PaymentServiceApplication          : Started PaymentServiceApplication in 4.807 seconds (process running for 7.332)

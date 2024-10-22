@@ -47,31 +47,38 @@ public class ChatController {
     }
 
 
-
     @MessageMapping("/chat.sendMessage")
     public void processMessageFromWebSocket(@Payload ChatMessage message) {
+        // Lưu tin nhắn vào cơ sở dữ liệu
         ChatMessage savedMessage = chatMessageService.saveMessage(message);
 
+        // Lấy danh sách userId trong phòng, bao gồm cả người gửi
+        List<Long> recipientUserIds = chatMessageService.getAllUserIdsInRoom(message.getRoomId());
 
-        // Tính số lượng tin nhắn chưa đọc từ userId cho phòng này
-        Long unreadCount = chatMessageService.countMessagesSinceLastUserMessage(message.getRoomId(), message.getUserId());
+        // Gửi tin nhắn mới và số lượng tin nhắn chưa đọc cho từng người dùng trong danh sách
+        for (Long recipientUserId : recipientUserIds) {
+            Long unreadCount = chatMessageService.countMessagesSinceLastUserMessage(message.getRoomId(), recipientUserId);
+            ChatMessageWithUnreadCount responseMessage = new ChatMessageWithUnreadCount(savedMessage, unreadCount);
 
-        // Tạo đối tượng phản hồi chứa tin nhắn và số lượng tin nhắn chưa đọc
-        ChatMessageWithUnreadCount responseMessage = new ChatMessageWithUnreadCount(savedMessage, unreadCount);
+            // Log thông tin người nhận và nội dung tin nhắn gửi đi
+            System.out.println("Sending message to recipientUserId: " + recipientUserId);
+            System.out.println("Message content: " + responseMessage);
 
-
-        // Gửi tin nhắn tới tất cả các phiên WebSocket nguyên bản trong cùng roomId
-        try {
-            nativeWebSocketConfig.sendMessageToRoom(message.getRoomId().toString(), savedMessage.getText());
-        } catch (Exception e) {
-            // Xử lý ngoại lệ nếu có
-            e.printStackTrace();
+            // Gửi thông báo đến topic /topic/latestMessages/{recipientUserId}
+            try {
+                messagingTemplate.convertAndSend("/topic/latestMessages/" + recipientUserId, responseMessage);
+            } catch (Exception e) {
+                // Log lỗi nếu xảy ra lỗi trong quá trình gửi tin nhắn
+                System.err.println("Error sending message to user " + recipientUserId + ": " + e.getMessage());
+                e.printStackTrace();
+            }
         }
-        messagingTemplate.convertAndSend("/topic/room/" + message.getRoomId(), savedMessage);
 
-        // Gửi tin nhắn mới nhất tới các client đang theo dõi danh sách các phòng
-        messagingTemplate.convertAndSend("/topic/latestMessages", responseMessage);
+        // Gửi tin nhắn tới tất cả các client đang theo dõi room cụ thể
+        messagingTemplate.convertAndSend("/topic/room/" + message.getRoomId(), savedMessage);
     }
+
+
 
     @PostMapping("/send")
     public ChatMessage sendMessage(@RequestBody ChatMessage message) {

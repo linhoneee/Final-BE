@@ -28,31 +28,30 @@ public class ChatMessageService {
     }
 
     public List<ChatMessageWithUnreadCount> getLatestMessagesWithUnreadCount(Long userId) {
-        // Lấy tin nhắn mới nhất cho tất cả các phòng
         List<ChatMessage> latestMessages = chatMessageRepository.findLatestMessagesForAllRooms();
 
         return latestMessages.stream().map(latestMessage -> {
-            // Lấy tin nhắn cuối cùng mà người dùng này gửi trong phòng
-            ChatMessage lastUserMessage = chatMessageRepository.findLastMessageByUserInRoom(latestMessage.getRoomId(), userId);
-
-            LocalDateTime lastUserMessageTime = lastUserMessage != null ? lastUserMessage.getCreatedAtAsLocalDateTime() : LocalDateTime.MIN;
-
-            // Đếm số lượng tin nhắn kể từ tin nhắn cuối cùng mà người dùng này gửi
-            Long unreadCount = chatMessageRepository.countMessagesSinceLastUserMessage(latestMessage.getRoomId(), lastUserMessageTime);
-
-            // Trả về đối tượng chứa tin nhắn mới nhất và số lượng tin nhắn chưa đọc
+            Long unreadCount = countMessagesSinceLastUserMessage(latestMessage.getRoomId(), userId);
             return new ChatMessageWithUnreadCount(latestMessage, unreadCount);
         }).collect(Collectors.toList());
     }
 
+    public Long countMessagesSinceLastUserMessage(Long roomId, Long recipientUserId) {
+        ChatMessage lastReadMessage = chatMessageRepository.findLastMessageByUserInRoom(roomId, recipientUserId);
+        LocalDateTime lastReadTime = lastReadMessage != null ? lastReadMessage.getCreatedAtAsLocalDateTime() : LocalDateTime.MIN;
+        // Đếm số lượng tin nhắn trong phòng kể từ thời điểm cuối cùng người dùng đọc tin nhắn
+        return chatMessageRepository.countMessagesSinceLastUserMessage(roomId, lastReadTime);
+    }
 
-    public Long countMessagesSinceLastUserMessage(Long roomId, Long userid) {
-        ChatMessage lastUserMessage = chatMessageRepository.findLastMessageByUserInRoom(roomId, roomId);
-        if (lastUserMessage == null) {
-            return chatMessageRepository.countMessagesInRoom(roomId);
-        }
-        LocalDateTime lastMessageTime = lastUserMessage.getCreatedAtAsLocalDateTime();
-        return chatMessageRepository.countMessagesSinceLastUserMessage(roomId, lastMessageTime);
+    public List<Long> getAllUserIdsInRoomExceptSender(Long roomId, Long senderUserId) {
+        // Trả về danh sách userID của những người trong phòng, ngoại trừ senderUserId
+        // Có thể lấy từ database hoặc bộ nhớ tạm
+        return chatMessageRepository.findAllUserIdsInRoomExceptSender(roomId, senderUserId);
+    }
+
+    public List<Long> getAllUserIdsInRoom(Long roomId) {
+        // Trả về danh sách userID của tất cả người dùng trong phòng
+        return chatMessageRepository.findAllUserIdsInRoom(roomId);
     }
 
 }

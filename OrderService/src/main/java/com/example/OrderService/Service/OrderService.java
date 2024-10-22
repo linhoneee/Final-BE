@@ -148,42 +148,33 @@ public class OrderService {
                 );
     }
 
-    public Mono<Map<String, Object>> getOrderStatistics() {
+    public Mono<List<Map<String, Object>>> getTopSellingProducts() {
         return orderRepository.findAll()
                 .collectList()
                 .map(orders -> {
-                    Map<String, Object> statistics = new HashMap<>();
-                    double totalSales = 0;
-                    int totalOrders = orders.size(); // Tổng số đơn hàng dựa trên số lượng bản ghi
-                    Map<Long, Integer> productQuantities = new HashMap<>(); // Bản đồ để đếm số lượng bán được của mỗi sản phẩm
+                    Map<Long, Integer> productQuantities = new HashMap<>();
 
                     for (Order order : orders) {
-                        // Cộng dồn giá trị "total" của mỗi đơn hàng vào tổng tiền
-                        totalSales += order.getTotal();
-
                         String itemsJson = order.getItems();
                         try {
-                            // Parse chuỗi JSON items thành List<Item>
                             List<Item> items = objectMapper.readValue(itemsJson, new TypeReference<List<Item>>() {});
 
-                            // Tính tổng số lượng sản phẩm bán được
                             for (Item item : items) {
-                                productQuantities.put(item.getProductId(), productQuantities.getOrDefault(item.getProductId(), 0) + item.getQuantity());
+                                productQuantities.put(item.getProductId(),
+                                        productQuantities.getOrDefault(item.getProductId(), 0) + item.getQuantity());
                             }
                         } catch (Exception e) {
-                            e.printStackTrace(); // Log lỗi nếu có ngoại lệ
+                            e.printStackTrace();
                         }
                     }
 
-                    // Tính top 10 sản phẩm bán chạy nhất
                     List<Map.Entry<Long, Integer>> topProducts = productQuantities.entrySet()
                             .stream()
                             .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
                             .limit(10)
                             .collect(Collectors.toList());
 
-                    // Chuẩn bị dữ liệu trả về
-                    List<Map<String, Object>> topProductList = topProducts.stream()
+                    return topProducts.stream()
                             .map(entry -> {
                                 Map<String, Object> productData = new HashMap<>();
                                 productData.put("productId", entry.getKey());
@@ -191,13 +182,58 @@ public class OrderService {
                                 return productData;
                             })
                             .collect(Collectors.toList());
+                });
+    }
+    public Mono<Map<String, Object>> getOrderStatistics() {
+        LocalDateTime now = LocalDateTime.now();
+        LocalDateTime startOfCurrentMonth = now.withDayOfMonth(1);
+        LocalDateTime startOfPreviousMonth = startOfCurrentMonth.minusMonths(1);
+
+        return orderRepository.findAll()
+                .collectList()
+                .map(orders -> {
+                    Map<String, Object> statistics = new HashMap<>();
+                    double totalSales = 0; // Tổng doanh thu của toàn bộ cơ sở dữ liệu
+                    int totalOrders = orders.size(); // Tổng số đơn hàng của toàn bộ cơ sở dữ liệu
+                    double totalSalesCurrentMonth = 0;
+                    int totalOrdersCurrentMonth = 0;
+                    double totalSalesPreviousMonth = 0;
+                    int totalOrdersPreviousMonth = 0;
+
+                    for (Order order : orders) {
+                        // Cộng dồn vào tổng doanh thu của toàn bộ cơ sở dữ liệu
+                        totalSales += order.getTotal();
+
+                        // Kiểm tra các đơn hàng thuộc tháng hiện tại
+                        if (order.getCreatedAt().isAfter(startOfCurrentMonth)) {
+                            totalSalesCurrentMonth += order.getTotal();
+                            totalOrdersCurrentMonth++;
+                        }
+                        // Kiểm tra các đơn hàng thuộc tháng trước
+                        else if (order.getCreatedAt().isAfter(startOfPreviousMonth) &&
+                                order.getCreatedAt().isBefore(startOfCurrentMonth)) {
+                            totalSalesPreviousMonth += order.getTotal();
+                            totalOrdersPreviousMonth++;
+                        }
+                    }
+
+                    // Tính tỷ lệ tăng trưởng doanh thu
+                    double salesGrowthRate = totalSalesPreviousMonth > 0 ?
+                            ((totalSalesCurrentMonth - totalSalesPreviousMonth) / totalSalesPreviousMonth) * 100 : 0;
+
+                    // Tính tỷ lệ tăng trưởng số đơn hàng
+                    double orderGrowthRate = totalOrdersPreviousMonth > 0 ?
+                            ((totalOrdersCurrentMonth - totalOrdersPreviousMonth) / (double) totalOrdersPreviousMonth) * 100 : 0;
 
                     // Đưa các kết quả vào đối tượng trả về
-                    statistics.put("totalSales", totalSales);
-                    statistics.put("totalOrders", totalOrders);
-                    statistics.put("topProducts", topProductList);
+                    statistics.put("totalSales", totalSales); // Tổng doanh thu toàn bộ
+                    statistics.put("totalOrders", totalOrders); // Tổng số đơn hàng toàn bộ
+                    statistics.put("salesGrowthRate", salesGrowthRate);
+                    statistics.put("orderGrowthRate", orderGrowthRate);
 
                     return statistics;
                 });
     }
+
+
 }
