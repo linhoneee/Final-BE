@@ -74,4 +74,10 @@ public class OrderController {
         return orderService.getTopSellingProducts();
     }
 
+    @PatchMapping("/{orderId}/update-location")
+    public Mono<Order> updateOrderLocation(@PathVariable Long orderId, @RequestParam double currentLatitude, @RequestParam double currentLongitude) {
+        return orderService.updateOrderLocation(orderId, currentLatitude, currentLongitude);
+    }
+
+
 }

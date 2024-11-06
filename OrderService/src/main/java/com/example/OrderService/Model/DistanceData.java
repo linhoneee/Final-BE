@@ -25,4 +25,26 @@ public class DistanceData {
     private double destinationLatitude;
     private double destinationLongitude;
     private double distance;
+    private double currentLatitude;  // Tọa độ vĩ độ hiện tại của hàng hóa
+    private double currentLongitude; // Tọa độ kinh độ hiện tại của hàng hóa
+
+    public double getCurrentLongitude() {
+        return currentLongitude;
+    }
+
+    public double getCurrentLatitude() {
+        return currentLatitude;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
+
+    public void setCurrentLongitude(double currentLongitude) {
+        this.currentLongitude = currentLongitude;
+    }
+
+    public void setCurrentLatitude(double currentLatitude) {
+        this.currentLatitude = currentLatitude;
+    }
 }

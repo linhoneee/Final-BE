@@ -5,6 +5,7 @@ import com.example.messaging_service.Config.LocalDateTimeAdapter;
 import com.example.messaging_service.Config.NativeWebSocketConfig;
 import com.example.messaging_service.Model.ChatMessage;
 import com.example.messaging_service.Model.ChatMessageWithUnreadCount;
+import com.example.messaging_service.Repository.CloudinaryService;
 import com.example.messaging_service.Service.ChatMessageService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
@@ -17,10 +18,14 @@ import org.springframework.messaging.simp.SimpMessageHeaderAccessor;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Map;
+
 @RestController
 @RequestMapping("/api/messages")
 public class ChatController {
@@ -136,5 +141,38 @@ public class ChatController {
     public List<ChatMessageWithUnreadCount> getLatestMessagesForAllRooms(@RequestParam Long userId) {
         return chatMessageService.getLatestMessagesWithUnreadCount(userId);
     }
+
+    @Autowired
+    private CloudinaryService cloudinaryService;
+
+    @PostMapping("/sendMedia")
+    public ChatMessage sendMediaMessage(
+            @RequestParam("file") MultipartFile file,
+            @RequestParam("type") String type,
+            @RequestParam("roomId") Long roomId,
+            @RequestParam("senderId") Long senderId,
+            @RequestParam("username") String username, // Nhận username từ request
+            @RequestParam("role") String role // Nhận role từ request
+    ) throws IOException {
+        // Tải lên Cloudinary
+        Map<String, Object> uploadResult = cloudinaryService.uploadFile(file, type);
+        String mediaUrl = uploadResult.get("url").toString();
+
+        // Tạo và lưu tin nhắn
+        ChatMessage message = new ChatMessage();
+        message.setRoomId(roomId);
+        message.setUserId(senderId);
+        message.setUsername(username); // Lưu username vào đối tượng message
+        message.setRole(role); // Lưu role vào đối tượng message
+        message.setMediaUrl(mediaUrl);
+        message.setMediaType(type);
+        message.setUnRead(true); // Cờ đánh dấu chưa đọc, nếu cần
+        ChatMessage savedMessage = chatMessageService.saveMessage(message);
+
+        // Gửi tin nhắn tới client qua WebSocket
+        messagingTemplate.convertAndSend("/topic/room/" + roomId, savedMessage);
+        return savedMessage;
+    }
+
 
 }

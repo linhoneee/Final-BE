@@ -3,7 +3,6 @@ package com.example.messaging_service.Model;
 import jakarta.persistence.*;
 import lombok.Data;
 import java.time.format.DateTimeFormatter;
-
 import java.time.LocalDateTime;
 
 @Data
@@ -24,6 +23,10 @@ public class ChatMessage {
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
+    // Các trường mới cho URL và loại phương tiện
+    private String mediaUrl;    // URL của file lưu trên Cloudinary
+    private String mediaType;   // Loại file (ví dụ: "image", "video", "audio")
+
     @PrePersist
     protected void onCreate() {
         createdAt = LocalDateTime.now();
@@ -33,6 +36,7 @@ public class ChatMessage {
     protected void onUpdate() {
         updatedAt = LocalDateTime.now();
     }
+
     // Khai báo formatter cho ngày giờ
     private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
@@ -52,7 +56,25 @@ public class ChatMessage {
     public void setUpdatedAt(String updatedAt) {
         this.updatedAt = LocalDateTime.parse(updatedAt, formatter);
     }
-    // Getters and Setters
+
+    // Getters and Setters bổ sung cho trường mediaUrl và mediaType
+    public String getMediaUrl() {
+        return mediaUrl;
+    }
+
+    public void setMediaUrl(String mediaUrl) {
+        this.mediaUrl = mediaUrl;
+    }
+
+    public String getMediaType() {
+        return mediaType;
+    }
+
+    public void setMediaType(String mediaType) {
+        this.mediaType = mediaType;
+    }
+
+// Getters and Setters
     public LocalDateTime getCreatedAtAsLocalDateTime() {
         return this.createdAt;
     }

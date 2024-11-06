@@ -2,10 +2,12 @@ package com.example.OrderService.Service;
 
 
 import com.example.OrderService.Entity.Order;
+import com.example.OrderService.Model.DistanceData;
 import com.example.OrderService.Repository.OrderRepository;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+import com.google.gson.Gson;
 import com.linhmai.CommonService.model.DistanceDataOrderService;
 import com.linhmai.CommonService.model.Item;
 import lombok.extern.slf4j.Slf4j;
@@ -232,6 +234,39 @@ public class OrderService {
                     statistics.put("orderGrowthRate", orderGrowthRate);
 
                     return statistics;
+                });
+    }
+
+    public Order getOrderById(long id) {
+        return orderRepository.findById(id).block();
+    }
+
+    private final Gson gson = new Gson();
+
+    // Chuyển đối tượng DistanceData thành chuỗi JSON
+    public String convertToJson(DistanceData distanceData) {
+        return gson.toJson(distanceData);
+    }
+
+    // Chuyển chuỗi JSON thành đối tượng DistanceData
+    public DistanceData convertFromJson(String json) {
+        return gson.fromJson(json, DistanceData.class);
+    }
+
+    public Mono<Order> updateOrderLocation(Long orderId, double currentLatitude, double currentLongitude) {
+        return orderRepository.findById(orderId)
+                .flatMap(order -> {
+                    // Chuyển đổi chuỗi JSON thành đối tượng DistanceData
+                    DistanceData distanceData = convertFromJson(order.getDistanceData());
+
+                    // Cập nhật vị trí hiện tại
+                    distanceData.setCurrentLatitude(currentLatitude);
+                    distanceData.setCurrentLongitude(currentLongitude);
+
+                    // Chuyển đổi đối tượng DistanceData thành chuỗi JSON để lưu lại
+                    order.setDistanceData(convertToJson(distanceData));
+
+                    return orderRepository.save(order);
                 });
     }
 

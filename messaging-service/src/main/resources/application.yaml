@@ -16,10 +16,22 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQLDialect
+  servlet:
+    multipart:
+      max-file-size: 20MB      # Kích thước tối đa cho một file
+      max-request-size: 20MB   # Kích thước tối đa cho toàn bộ request
 
     jackson:
       serialization:
         WRITE_DATES_AS_TIMESTAMPS: false
+
+cloudinary:
+  cloud_name: dicpjqlf0
+  api_key: 561666668412925
+  api_secret: zRBGwVzAxfen1qVN6Du1pX56Glk
+
+
+
 
 #logging:
 #  level:
