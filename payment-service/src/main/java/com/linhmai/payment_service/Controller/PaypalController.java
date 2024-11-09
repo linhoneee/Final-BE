@@ -1,5 +1,6 @@
 package com.linhmai.payment_service.Controller;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.linhmai.CommonService.utils.Constant;
 import com.linhmai.payment_service.Event.EventProducer;
 import com.linhmai.payment_service.Model.PaymentRequest;
@@ -11,12 +12,14 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 import java.net.URLEncoder;
+import java.util.concurrent.TimeUnit;
 
 @RestController
 @RequestMapping("")
@@ -33,14 +36,12 @@ public class PaypalController {
     @Autowired
     private EventProducer eventProducer;
 
-    private PaymentRequest currentPaymentRequest; // Biến lưu trữ yêu cầu hiện tại
+    @Autowired
+    private RedisTemplate<String, Object> redisTemplate;
 
     @PostMapping("/paypal")
     public String payment(@RequestBody @Valid PaymentRequest paymentRequest) {
         try {
-            // Lưu trữ yêu cầu hiện tại
-            this.currentPaymentRequest = paymentRequest;
-
             // URL success mặc định
             String successUrl = "http://localhost:8009/payment/success";
 
@@ -49,6 +50,7 @@ public class PaypalController {
                 successUrl = "yourapp://payment/success";
             }
 
+            // Tạo thanh toán với PayPal
             Payment createdPayment = paypalService.createPayment(
                     paymentRequest.getTotal(),
                     "USD",
@@ -56,9 +58,14 @@ public class PaypalController {
                     "sale",
                     "Payment description",
                     "http://localhost:8009/payment/cancel",
-                    successUrl  // Sử dụng URL phù hợp với platform
+                    successUrl
             );
 
+            // Lưu `PaymentRequest` vào Redis với `paymentId` từ PayPal
+            String paymentId = createdPayment.getId();  // Lấy `paymentId` từ PayPal
+            redisTemplate.opsForValue().set("payment_" + paymentId, paymentRequest, 30, TimeUnit.MINUTES);
+
+            // Trả về URL phê duyệt
             for (com.paypal.api.payments.Links link : createdPayment.getLinks()) {
                 if (link.getRel().equals("approval_url")) {
                     return link.getHref();
@@ -71,37 +78,36 @@ public class PaypalController {
         return "Error";
     }
 
+    @Autowired
+    private ObjectMapper objectMapper;
+
     @GetMapping("/payment/success")
     public void paymentSuccess(@RequestParam("paymentId") String paymentId, @RequestParam("PayerID") String payerId, HttpServletResponse response) throws IOException {
+        // Lấy dữ liệu từ Redis và chuyển đổi sang đối tượng PaymentRequest
+        Object cachedData = redisTemplate.opsForValue().get("payment_" + paymentId);
+        PaymentRequest currentPaymentRequest = objectMapper.convertValue(cachedData, PaymentRequest.class);
+
+        if (currentPaymentRequest == null) {
+            log.warn("PaymentRequest không tồn tại hoặc đã quá hạn trong Redis cho paymentId: {}", paymentId);
+            response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Thanh toán đã quá hạn. Vui lòng thử lại.");
+            return;
+        }
+
         try {
             Payment executedPayment = paypalService.executePayment(paymentId, payerId);
 
-            if (executedPayment.getState().equals("approved")) {
+            if ("approved".equals(executedPayment.getState())) {
                 log.info("Thanh toán thành công: {}", executedPayment.toJSON());
-                log.info("Dữ liệu thanh toán: {}", gson.toJson(this.currentPaymentRequest));
+                log.info("Dữ liệu thanh toán: {}", gson.toJson(currentPaymentRequest));
 
-                // Gửi dữ liệu vào Kafka topic
-                eventProducer.send(Constant.PAYMENT_SUCCESS_TOPIC, gson.toJson(this.currentPaymentRequest))
-                        .subscribe(result -> log.info("Sent payment data to Kafka: {}", result),
-                                error -> log.error("Failed to send payment data to Kafka", error));
-
-                // Mã hóa currentRequest thành chuỗi JSON và URL encode
-                String currentRequestJson = URLEncoder.encode(gson.toJson(this.currentPaymentRequest), "UTF-8");
-
-                // Redirect người dùng đến trang thành công trên FE hoặc mở deep link cho mobile
-                String redirectUrl;
-                if ("mobile".equalsIgnoreCase(this.currentPaymentRequest.getPlatform())) {
-                    redirectUrl = "yourapp://payment/success?paymentId=" + paymentId + "&PayerID=" + payerId + "&currentRequest=" + currentRequestJson;
-                } else {
-                    redirectUrl = "http://localhost:3000/success?paymentId=" + paymentId + "&PayerID=" + payerId + "&currentRequest=" + currentRequestJson;
-                }
+                String currentRequestJson = URLEncoder.encode(gson.toJson(currentPaymentRequest), "UTF-8");
+                String redirectUrl = "http://localhost:3000/success?paymentId=" + paymentId + "&PayerID=" + payerId + "&currentRequest=" + currentRequestJson;
                 response.sendRedirect(redirectUrl);
                 return;
             }
         } catch (PayPalRESTException e) {
             log.error("Error while executing PayPal payment: ", e);
         }
-        log.warn("Thanh toán thất bại");
         response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Thanh toán thất bại");
     }
 

@@ -78,6 +78,14 @@ public class ChatController {
                 e.printStackTrace();
             }
         }
+        try {
+            String jsonMessage = gson.toJson(savedMessage);
+
+            nativeWebSocketConfig.sendMessageToRoom(message.getRoomId().toString(), jsonMessage);
+        } catch (Exception e) {
+            // Xử lý ngoại lệ nếu có
+            e.printStackTrace();
+        }
 
         // Gửi tin nhắn tới tất cả các client đang theo dõi room cụ thể
         messagingTemplate.convertAndSend("/topic/room/" + message.getRoomId(), savedMessage);
