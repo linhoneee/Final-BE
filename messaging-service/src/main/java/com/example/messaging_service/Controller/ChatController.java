@@ -11,6 +11,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.messaging.handler.annotation.SendTo;
@@ -21,10 +22,13 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 @RestController
 @RequestMapping("/api/messages")
@@ -50,6 +54,44 @@ public class ChatController {
                 .registerTypeAdapter(LocalDateTime.class, new LocalDateTimeAdapter())
                 .create();
     }
+
+    @Autowired
+    private RedisTemplate<String, Object> redisTemplate;
+
+    private final long HEARTBEAT_INTERVAL_SECONDS = 60; // TTL 60 giây
+
+    public void updateOnlineStatus(Long userId) {
+        String key = "user_online_status:" + userId;
+        redisTemplate.opsForValue().set(key, true, Duration.ofSeconds(HEARTBEAT_INTERVAL_SECONDS));
+    }
+
+    @MessageMapping("/chat.heartbeat")
+    public void processHeartbeat(@Payload Long userId) {
+        updateOnlineStatus(userId);
+        System.out.println("Received heartbeat from user: " + userId); // Log khi nhận được heartbeat
+    }
+
+    @GetMapping("/online-status")
+    public List<Long> getAllOnlineUsers() {
+        // Tìm tất cả các khóa có tiền tố "user_online_status:"
+        Set<String> keys = redisTemplate.keys("user_online_status:*");
+        List<Long> onlineUserIds = new ArrayList<>();
+
+        if (keys != null) {
+            for (String key : keys) {
+                // Trích xuất userId từ khóa và kiểm tra nếu người dùng đang online
+                Boolean isOnline = (Boolean) redisTemplate.opsForValue().get(key);
+                if (Boolean.TRUE.equals(isOnline)) {
+                    Long userId = Long.parseLong(key.split(":")[1]);
+                    onlineUserIds.add(userId);
+                }
+            }
+        }
+
+        return onlineUserIds;
+    }
+
+
 
 
     @MessageMapping("/chat.sendMessage")
